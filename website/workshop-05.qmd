@@ -1,0 +1,22 @@
+---
+title: "Tier 2b — Fitting the model, and checking it"
+description: "A log-Gaussian Cox process with self-excitement on a snippet of the call series — and then verifying the fit without the assistant's help."
+description-short: "Fit it, then check it yourself."
+duration: 35min
+time: "15:05"
+---
+
+## Outline
+
+- **(20m) Exercise: `06_lgcp-selfexcite`.** Fit an LGCP with self-excitement to
+  a short snippet of the call series, with the assistant doing the typing. The
+  loop: state the model, let it draft, read the draft, correct the
+  parameterisation, refit.
+- **(15m) Exercise: `07_verify-the-assistant`.** Interrogate the fit *without*
+  the assistant. Does the intensity integrate to roughly the observed count?
+  Does the self-excitement kernel have a sensible timescale? Then ask the
+  assistant to critique its own fit and see whether it finds what you found.
+
+## Takeaway
+
+The AI accelerates the work. You remain the scientist.

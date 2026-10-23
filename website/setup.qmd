@@ -1,0 +1,40 @@
+---
+title: Setup
+---
+
+The whole workshop runs on [Posit Assistant](https://assistant.posit.co/docs/getting-started/),
+which ships in Positron, in RStudio, and as a terminal program. There are **no
+API keys to create or paste** — you sign in once with Posit AI Pass.
+
+## 1. Required — an editor and the project
+
+- R 4.4 or later.
+- **Either** [Positron](https://positron.posit.co) (recommended — the assistant
+  can see your live session) **or** a recent RStudio. Both are fully supported
+  for every hands-on exercise; pick the one you already use.
+- Clone the workshop repository, open the project, and run `_setup.R`.
+
+## 2. Required — sign in to Posit AI Pass
+
+- Open the assistant pane and sign in. Details will be circulated before the
+  meeting, along with whatever access Posit provides for attendees.
+- Verify with `_exercises/01_setup-check/01_assistant.md`.
+- If you already have an Anthropic, OpenAI or Gemini key you prefer to use,
+  Posit Assistant takes a bring-your-own-key provider instead. Either path works.
+
+## 3. Optional — the `pa` terminal program
+
+- Only needed if you want to follow along during the tier 3 demonstration.
+- Verify with `_exercises/01_setup-check/02_agent.sh`.
+- Claude Code works equally well here if that is what you already have.
+
+## 4. Optional — Ollama
+
+- For the closing local-model segment. Pull a small model **before** you travel;
+  the download is too large for meeting wifi.
+
+::: {.callout-tip}
+## If setup fails
+Come anyway. A Posit Cloud workspace with the project pre-built will be
+available as a fallback, and the tier 3 material is watched rather than typed.
+:::

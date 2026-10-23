@@ -1,0 +1,17 @@
+The repo is initialized and all 39 files are staged on branch `main`,
+but the first commit could not be made from the sandbox (it can't delete
+git's temp files there). Run this in your own terminal:
+
+  cd ~/Documents/_research/git_repos/narwc_workshop
+  rm -f .git/stale-index-lock
+  find .git/objects -name 'tmp_obj_*' -delete
+  git commit -m "Initial import: NARWC half-day AI workshop scaffold"
+
+Then, when you're ready to push:
+
+  gh repo create narwc_workshop --private --source=. --push
+
+Then delete this file and the old copy:
+
+  rm NEXT_STEP.txt
+  rm -rf ~/Documents/_research/rrr/llm/workshop_2026

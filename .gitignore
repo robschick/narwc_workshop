@@ -1,0 +1,10 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+.env
+.env.secret
+/website/_site/
+/website/.quarto/
+.posit/

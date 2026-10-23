@@ -1,0 +1,32 @@
+---
+title: "Tier 2a — The assistant in your session"
+description: "Posit Assistant in Positron or RStudio, reading your live session. Exploratory analysis of the call series and pulling environmental covariates from a remote API."
+description-short: "Hands-on EDA and covariates."
+duration: 40min
+time: "14:25"
+---
+
+## Slides
+
+<!-- {{< revealjs "slides/slides-04.html" height="600px" class="ratio ratio-16x9" >}} -->
+
+## Outline
+
+- **(8m) What changes when it can see your session.** Posit Assistant reads the
+  data frame rather than your description of it. Where that helps, and where it
+  quietly misleads. Positron and RStudio both work for everything below.
+
+  One naming note for the room: Posit Assistant replaced Positron Assistant and
+  Databot as of Positron 2026.07, so tutorials you find online may use names
+  that no longer exist.
+- **(15m) Exercise: `04_eda-calls`.** Call rate over time, diel structure,
+  gaps, detector artefacts. Ask for one plot at a time. Read every line before
+  you run it.
+- **(17m) Exercise: `05_covariates-erddap`.** Ask for code to pull SST and wind
+  from ERDDAP — first cold, then with the package documentation pasted into the
+  prompt. Compare. The cold attempt invents function signatures.
+
+## Takeaway
+
+Documentation in the prompt beats a bigger model. This is the single most
+useful habit in the workshop.

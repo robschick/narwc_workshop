@@ -1,0 +1,31 @@
+---
+title: "Cold open: zero to a diel pattern"
+description: "The destination first — a live agent run on the raw up-call data, then an honest look at what it got wrong."
+description-short: "The wow, then the curtain pulled back."
+duration: 25min
+time: "13:00"
+---
+
+## Slides
+
+<!-- {{< revealjs "slides/slides-01.html" height="600px" class="ratio ratio-16x9" >}} -->
+
+## Outline
+
+- **(8m) The cold open.** From an empty directory: the raw seven-day up-call
+  detection file, one sentence of intent, and the `pa` agent. It reads the file,
+  describes the columns, plots calls-per-hour against time of day, and flags
+  the diel structure. No narration while it runs.
+- **(4m) Pull the curtain back.** What it got right, what it assumed, and the
+  one thing in the output that is wrong. Set the tone: impressive is not the
+  same as correct.
+- **(5m) Welcome and the map.** The three tiers and what you'll leave with.
+- **(8m) Setup checkpoint.** `_exercises/01_setup-check/`. Posit AI Pass is a
+  sign-in, not a secret, so there are no keys to paste — which is why this is
+  eight minutes and not thirty. Posit Cloud is the fallback. Helpers circulate.
+
+## Notes for the instructor
+
+- Pick the deliberate error during dry-run. Do not improvise it.
+- Have a recording of this run as a fallback; the first eight minutes are the
+  worst possible time for a network failure.

@@ -1,0 +1,19 @@
+---
+title: "Local models and pitfalls"
+description: "The same question against a local model via Ollama, and the collected list of practices and traps from the whole session."
+description-short: "Ollama, and the list."
+duration: 10min
+time: "16:45"
+---
+
+## Outline
+
+- **(5m) Ollama.** `_exercises/09_ollama-local`. The same up-call question against a local model. Posit Assistant takes a local provider, so this is a dropdown change, not a different workflow. Slower and
+  worse — show that honestly — and it never leaves the laptop. When that trade
+  is right: embargoed data, permits, no cloud, no budget.
+- **(5m) Practices and pitfalls, collected.**
+  - Context is a resource you spend deliberately.
+  - Documentation in the prompt beats a bigger model.
+  - Never accept a number you haven't checked.
+  - Keep the plan in version control alongside the code.
+  - The model's confidence is uncorrelated with its correctness.

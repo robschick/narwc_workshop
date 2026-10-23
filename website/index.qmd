@@ -1,0 +1,37 @@
+---
+title: "Using AI in the Analysis of Marine Ecological Data"
+---
+
+A half-day, hands-on workshop on three complementary ways to use AI in an
+analytical workflow — from lowest to highest commitment — worked end to end on
+a single dataset: seven days of DCL/DE detections of North Atlantic right whale
+up-calls.
+
+- **Tier 1 — a chat interface**, for planning an analysis and reasoning about
+  which model suits the data. Posit Assistant's `/plan` mode writes the plan to
+  a file.
+- **Tier 2 — a coding assistant** working alongside you in a live R session,
+  in Positron or RStudio:
+  exploratory analysis, environmental covariates from a remote API, and a
+  log-Gaussian Cox process with self-excitement.
+- **Tier 3 — a command-line agent** (`pa`) turned loose on a real repository:
+  implementation, refactoring, manuscript documentation, and project tracking.
+
+All three tiers are the same product — [Posit Assistant](https://assistant.posit.co),
+in the editor, the IDE and the terminal — so moving up a tier changes how much
+autonomy you grant, not which tool you use. Access is through Posit AI Pass:
+one sign-in, no API keys.
+
+We close with a look at running a local model via Ollama, for when data
+privacy, cloud access or cost is a barrier.
+
+Throughout, we weigh best practices and pitfalls, emphasising critical,
+reproducible use: the AI accelerates the work, but you remain the scientist.
+
+Intended for researchers with basic R familiarity. No AI experience required.
+
+::: {.callout-note}
+## Schedule at a glance
+See the [workshop schedule](workshop.qmd). Start by working through the
+[setup instructions](setup.qmd) before the day.
+:::

@@ -1,0 +1,56 @@
+project:
+  type: website
+  preview:
+    port: 7568
+  render:
+    - "./*.qmd"
+    - "slides/*.qmd"
+  resources:
+    - slides
+
+website:
+  title: "AI in Marine Ecological Data Analysis"
+  description: "A half-day workshop on chat, coding assistants and agents, using NARW up-call data"
+
+  page-footer: |
+    Half-day workshop · 2026
+
+  navbar:
+    title: "AI for Marine Ecology"
+    background: "#0b2b3c"
+    foreground: white
+    left:
+      - href: index.qmd
+        text: Home
+      - href: workshop.qmd
+        text: Workshop
+      - href: setup.qmd
+        text: Setup
+
+  page-navigation: true
+
+  sidebar:
+    - id: workshop
+      style: docked
+      type: light
+      contents:
+        - workshop.qmd
+        - text: '<div class="sidebar-divider font-monospace">Tier 0 — the wow</div>'
+        - workshop-01.qmd
+        - text: '<div class="sidebar-divider font-monospace">Tier 1 — chat</div>'
+        - workshop-02.qmd
+        - workshop-03-break.qmd
+        - text: '<div class="sidebar-divider font-monospace">Tier 2 — assistant</div>'
+        - workshop-04.qmd
+        - workshop-05.qmd
+        - workshop-06-break.qmd
+        - text: '<div class="sidebar-divider font-monospace">Tier 3 — agent</div>'
+        - workshop-07.qmd
+        - workshop-08.qmd
+        - workshop-09.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    lightbox: true

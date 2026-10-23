@@ -1,0 +1,36 @@
+---
+title: "Tier 3 — the agent on a real repository"
+description: "Sit back. The plan from tier 1, handed to the pa terminal agent on a real project: implementation, refactor, documentation, and a pull request."
+description-short: "The agent demonstration. No typing required."
+duration: 55min
+time: "15:50"
+---
+
+## Slides
+
+<!-- {{< revealjs "slides/slides-07.html" height="600px" class="ratio ratio-16x9" >}} -->
+
+## Outline
+
+- **(5m) What an agent is.** A read tool, a write tool, a loop, and permission
+  to run things. Why that combination is a step change rather than a faster
+  autocomplete. Note that this is the *same assistant* as block 3 and the same
+  sign-in — only the autonomy has changed. Claude Code is the equivalent
+  alternative if that is what you have.
+- **(30m) The recorded run, narrated.** `pa` is handed the plan file from
+  tier 1. Five chapters, each a pause point:
+  1. **Orientation** — it reads the repo and restates the plan in its own terms
+  2. **Implementation** — the analysis, written across several files
+  3. **Refactor** — the same code, made presentable
+  4. **Documentation** — a methods section for the manuscript
+  5. **Project tracking** — issues and a pull request on GitHub
+- **(15m) The live flourish.** One task, taken from the room if possible:
+  *"add a figure showing the fitted intensity against the observed calls, and
+  put it in the manuscript."* Live. If it fails, that is also a lesson.
+  Anyone who wants to try it later has `_exercises/08_agent-followalong/`.
+- **(5m) The bill.** Tokens, wall-clock and cost for what you just watched.
+
+## Notes for the instructor
+
+- Chapter the recording so you can pause cleanly for questions.
+- Pick the live task so that failure is survivable and interesting.

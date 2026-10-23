@@ -1,0 +1,34 @@
+---
+title: "Tier 1 — Planning with a chat interface"
+description: "The lowest-commitment surface. Anatomy of a conversation, an analysis plan written by Posit Assistant's /plan mode, and a hard look at hallucination."
+description-short: "Chat as a planning instrument, not a code generator."
+duration: 45min
+time: "13:25"
+---
+
+## Slides
+
+<!-- {{< revealjs "slides/slides-02.html" height="600px" class="ratio ratio-16x9" >}} -->
+
+## Outline
+
+- **(10m) Anatomy of a conversation.** System, user and assistant roles. The
+  conversation is stateless — every turn resends everything. Why that matters
+  to a scientist: context is a resource you spend deliberately.
+- **(15m) Exercise: `02_plan-with-chat`.** Describe the dataset — sampling
+  design, seven days, detector false-positive rate, available covariates — and
+  ask for *candidate models, not code*. Push back on the first answer.
+- **(10m) Exercise: `03_stress-test`.** Ask for an ecological interpretation of
+  a real figure, then of a plausible-looking figure built from noise. In pairs,
+  try to get a confident wrong answer out of the model.
+- **(10m) Turning a conversation into an artifact.** `/plan` in Posit
+  Assistant. It explores read-only, asks clarifying questions, and writes a
+  timestamped markdown plan under `.posit/assistant/plans/`. Then edit it by
+  hand — objective, data contract, method, **acceptance checks**. The checks are
+  the part a model cannot write for you. This file is the hand-off to the tier 3
+  demonstration; say so, so the room follows the thread.
+
+## Takeaway
+
+A chat interface is at its best when you use it to think, and at its worst when
+you use it to avoid thinking.

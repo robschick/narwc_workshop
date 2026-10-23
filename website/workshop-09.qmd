@@ -1,0 +1,14 @@
+---
+title: "Wrap-up"
+description: "Where this is going, where the materials live, and the answer to the question in the abstract."
+description-short: "Close and feedback."
+duration: 5min
+time: "16:55"
+---
+
+## Outline
+
+- Where this is going next. Brief, non-breathless.
+- Where the materials live and how to keep going.
+- Feedback survey.
+- Answer the abstract's closing question.
