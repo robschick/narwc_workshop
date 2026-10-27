@@ -18,7 +18,8 @@ API keys to create or paste** — you sign in once with Posit AI Pass.
 
 - Open the assistant pane and sign in. Details will be circulated before the
   meeting, along with whatever access Posit provides for attendees.
-- Verify with `_exercises/01_setup-check/01_assistant.md`.
+- Verify with `_exercises/01_setup-check/01_assistant.md`. There is no setup
+  time in the session itself, so please do this before the day.
 - If you already have an Anthropic, OpenAI or Gemini key you prefer to use,
   Posit Assistant takes a bring-your-own-key provider instead. Either path works.
 

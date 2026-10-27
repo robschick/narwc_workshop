@@ -1,6 +1,6 @@
 # Using AI in the Analysis of Marine Ecological Data
 
-**Half-day workshop (4 hours, two breaks) · North Atlantic right whale up-calls**
+**Half-day workshop (3 hours, 08:30–11:30, one break) · North Atlantic right whale up-calls**
 
 Runs end to end on Posit Assistant (Positron, RStudio, and the `pa` terminal
 TUI), with Posit AI Pass for access and Posit Cloud as the fallback environment.
@@ -15,10 +15,11 @@ calling as a concept); the rest is new.
 ## Design principles
 
 1. **One dataset, start to finish.** The seven-day DCL/DE dataset of NARW
-   up-calls is on screen from minute three to minute 240. No toy examples, no
+   up-calls is on screen from minute three to minute 180. No toy examples, no
    context switching.
 2. **Wow first, explain second.** The room sees the destination before it sees
-   the machinery. Setup troubleshooting hides under the cold open.
+   the machinery. Setup is done before the session, so the cold open starts on
+   time.
 3. **Escalating commitment, one product.** Posit Assistant ships in Positron,
    in RStudio, and as the `pa` terminal TUI — which is exactly the three tiers.
    So moving up a tier is a change in how much autonomy you grant, not a change
@@ -28,52 +29,67 @@ calling as a concept); the rest is new.
    verification step. The recurring question is not *did it run?* but *is it
    right?*
 5. **Hands-on in the middle, hands-off at the ends.** Attendees type during
-   blocks 2–5. Blocks 1, 6 and 7 they watch.
+   blocks 2–4. Blocks 1, 5, 6 and 7 they watch.
 
 ## Arc
 
 | # | Block | Mins | Mode | Beat |
 |---|-------|------|------|------|
-| 1 | Cold open: zero to a diel pattern | 25 | Watch | **Wow** |
+| 1 | Cold open: napkin to app | 15 | Watch | **Wow** |
 | 2 | Tier 1 — Planning with a chat interface | 45 | Hands-on | Feet wet |
-| — | ☕ Break | 15 | | |
 | 3 | Tier 2a — The assistant in your session: EDA & covariates | 40 | Hands-on | Feet dirty |
 | 4 | Tier 2b — Fitting the LGCP, and checking it | 35 | Hands-on | Feet dirty |
 | — | ☕ Break | 10 | | |
-| 5 | Tier 3 — the `pa` agent on a real repository | 55 | Watch (+1 live) | **Wow** |
-| 6 | Local models and pitfalls | 10 | Watch | Land it |
+| 5 | Tier 3 — the `pa` agent on a real repository | 15 | Watch | **Wow** |
+| 6 | Local models and pitfalls | 15 | Watch | Land it |
 | 7 | Wrap-up and feedback | 5 | | |
 
-Total: 240 minutes.
+Total: 180 minutes.
+
+*Cut from four hours to three (2026-10-23) to fit an 08:30–11:30 slot. What
+went: the first break, the in-room setup checkpoint (now done before the
+session), and the live task in block 5 (the recording stays). Block 6 gained
+five minutes.*
 
 ---
 
-## Block 1 — Cold open: zero to a diel pattern (25m)
+## Block 1 — Cold open: napkin to app (15m)
 
 > No slides for the first eight minutes. The workshop opens with the thing
 > people came to see.
 
-- **(8m) The cold open.** Live, from an empty directory: hand the `pa` agent the
-  raw seven-day up-call detection file and one sentence of intent. It reads the
-  file, describes the columns, notices the detections are timestamped, plots
-  calls-per-hour against time of day, and flags the diel structure. Do not
-  narrate while it runs — let the room read the screen.
-- **(4m) Pull the curtain back.** Same result, honestly framed: what it got
-  right, what it assumed, and the one thing in the output that is wrong (there
-  is always one — find it during dry-run and keep it). This sets the tone for
-  the whole session: impressive is not the same as correct.
-- **(5m) Welcome, and the map.** Who's here, the three tiers, and the promise:
-  by 17:00 you will have done tiers 1 and 2 yourself and watched tier 3.
-- **(8m) Setup checkpoint.** `_exercises/01_setup-check/` — confirm the Posit
-  AI Pass sign-in, confirm the assistant answers in the editor, confirm `pa`
-  runs in a terminal. With AI Pass there are no keys to paste, which is the
-  whole reason this block is eight minutes instead of thirty. Posit Cloud is the
-  fallback for anyone whose laptop fights the install. Helpers circulate.
+- **(8m) The cold open.** Live, from an empty directory. Hand the `pa` agent a
+  photo of a hand-drawn sketch of a dashboard (calls per hour by time of day,
+  a day selector) and the raw seven-day up-call file. It reads the file,
+  describes the columns, and builds a working Shiny app that matches the
+  sketch. Do not narrate while it runs; let the room read the screen.
+- **(4m) Pull the curtain back.** The app works and looks right. Then the
+  catch: the daily peak is in the wrong hours, because the timestamps are UTC
+  and nobody, the agent included, asked about time zones. The error is
+  planted, not hoped for: the timestamps carry no time-zone label and the
+  prompt doesn't mention one. Confirm in dry-run that the agent falls into it
+  every time; if it doesn't, change the setup, don't improvise. This sets the
+  tone for the session: a polished, working app can still be wrong.
+- **(3m) Welcome, and the map.** Who's here, the three tiers, and the promise:
+  by 11:30 you will have done tiers 1 and 2 yourself and watched tier 3.
+  Say plainly that nobody builds an app today; that is tier 3 work, and
+  block 5 shows how it's done.
+
+**Backup recording.** Record a clean run of the full eight minutes, with the
+same error, and keep it in `_demos/`. Switch to it if the live run stalls or the
+network fails; the first eight minutes are the worst time for either.
+
+**Setup happens before the session**, not in it.
+`_exercises/01_setup-check/` — confirm the Posit AI Pass sign-in, confirm the
+assistant answers in the editor, optionally confirm `pa` runs in a terminal —
+is on the site's setup page for attendees to do in advance. Posit Cloud is the
+fallback for anyone whose laptop fights the install; helpers point people there
+during block 1 rather than troubleshooting in the room.
 
 *Changed from the parent repo:* the Morning 1 "verify API access" beat and its
 `.env` / API-key-sharing app are **gone**. AI Pass is a sign-in, not a secret,
-and removing key provisioning from minute ten is the single biggest improvement
-over the full-day version.
+and removing key provisioning is the single biggest improvement over the
+full-day version — it is what makes pre-session setup realistic at all.
 
 ## Block 2 — Tier 1: planning with a chat interface (45m)
 
@@ -104,8 +120,6 @@ over the full-day version.
   because the acceptance checks are the part a model cannot write for you. This
   file is the hand-off to block 5; say that clearly, so the room knows the
   thread.
-
-## ☕ Break (15m)
 
 ## Block 3 — Tier 2a: the assistant in your session (40m)
 
@@ -144,15 +158,15 @@ over the full-day version.
 
 ## ☕ Break (10m)
 
-## Block 5 — Tier 3: the `pa` agent on a real repository (55m)
+## Block 5 — Tier 3: the `pa` agent on a real repository (15m)
 
-> Highest commitment, zero attendee typing. Recorded spine so the timing is
-> safe; one live task at the end so the room knows it's real.
+> Highest commitment, zero attendee typing. Recorded, so the timing is safe in
+> fifteen minutes.
 
-- **(5m) What an agent is.** Read tool, write tool, a loop, and permission to
+- **(2m) What an agent is.** Read tool, write tool, a loop, and permission to
   run things. Why that combination is a step change rather than a faster
   autocomplete.
-- **(30m) The recorded run, narrated.** Hand `pa` the plan file from block 2
+- **(11m) The recorded run, narrated.** Hand `pa` the plan file from block 2
   against a real project repository. Same assistant as block 3, same sign-in,
   more autonomy — that continuity is the point. Chapters, each a natural pause
   point for questions:
@@ -161,24 +175,21 @@ over the full-day version.
   3. Refactor — the same code, made presentable
   4. Documentation — a methods section for the manuscript
   5. Project tracking — issues and a pull request on GitHub
-  Pause the recording at each chapter boundary. The narration is where the
-  teaching happens: what you would have accepted, what you sent back.
+  Pause briefly at each chapter boundary — about two minutes a chapter, so the
+  recording itself must be cut tight. The narration is where the teaching
+  happens: what you would have accepted, what you sent back.
   Anyone who wants to try it later has `_exercises/08_agent-followalong/`.
-- **(15m) The live flourish.** One task, taken from the room if possible:
-  *"now add a figure showing the fitted intensity against the observed calls,
-  and put it in the manuscript."* Run it live. If it fails, that is also a
-  lesson and you have the recording as a backstop.
-- **(5m) The bill.** Tokens, wall-clock and money for what the room just
+- **(2m) The bill.** Tokens, wall-clock and money for what the room just
   watched. Nobody else will tell them this and everybody wants to know.
 
-## Block 6 — Local models and pitfalls (10m)
+## Block 6 — Local models and pitfalls (15m)
 
-- **(5m) Ollama.** `_exercises/09_ollama-local`. The same up-call question
+- **(7m) Ollama.** `_exercises/09_ollama-local`. The same up-call question
   against a local model — Posit Assistant takes a local provider, so this is a
   dropdown change rather than a different workflow. It is
   slower and worse — show that honestly — and it never leaves the laptop. When
   that trade is the right one: embargoed data, permits, no cloud, no budget.
-- **(5m) Best practices and pitfalls, collected.** The list the room has been
+- **(8m) Best practices and pitfalls, collected.** The list the room has been
   accumulating all session, now written down: context is a resource; docs in
   the prompt beat a bigger model; never accept a number you haven't checked;
   keep the plan in version control; the agent's confidence is uncorrelated with
@@ -222,7 +233,7 @@ over the full-day version.
 - Whether Posit grants AI Pass seats and a Cloud instructor space. Both asks are
   in the syllabus; the setup path assumes yes and degrades to bring-your-own-key
   if not.
-- The deliberate error in the cold open — pick it during dry-run, don't
-  improvise it.
+- The cold open's planted error is the UTC time shift. Confirm in dry-run that
+  it reproduces every time and that the app build fits in eight minutes.
 - Dataset staging: pre-loaded in the project, or fetched in block 3? Pre-loaded
   is safer for conference wifi.

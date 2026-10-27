@@ -3,7 +3,7 @@ title: "Tier 2b — Fitting the model, and checking it"
 description: "A log-Gaussian Cox process with self-excitement on a snippet of the call series — and then verifying the fit without the assistant's help."
 description-short: "Fit it, then check it yourself."
 duration: 35min
-time: "15:05"
+time: "10:10"
 ---
 
 ## Outline

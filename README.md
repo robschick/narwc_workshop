@@ -1,6 +1,6 @@
 # Using AI in the Analysis of Marine Ecological Data
 
-Half-day workshop (4 hours, two breaks). Scaffold only — the outline is
+Half-day workshop (3 hours, 08:30–11:30, one break). Scaffold only — the outline is
 complete, the exercise files are stubs with the task structure in place.
 
 ```
@@ -28,7 +28,8 @@ TUI — with Posit AI Pass for access. No API keys anywhere in the setup path.
 2. Hear back from Posit on AI Pass seats and a Cloud instructor space. The setup
    path assumes yes and degrades to bring-your-own-key if not.
 3. Decide which repository the tier 3 agent run operates on.
-4. Dry-run the cold open and pick the deliberate error (see `outline.md`).
+4. Dry-run the cold open (napkin to Shiny app, planted UTC error) and record
+   the backup run (see `outline.md`).
 5. Record the tier 3 spine, chaptered.
 6. Fill `_solutions/` as the exercises settle.
 7. Delete the original at `~/Documents/_research/rrr/llm/workshop_2026/` once

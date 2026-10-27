@@ -5,7 +5,7 @@ start of a new thread for the narrative state and what's blocked.
 
 ## What this is
 
-A **half-day (4h) workshop** — *Using AI in the Analysis of Marine Ecological
+A **half-day (3h, 08:30–11:30) workshop** — *Using AI in the Analysis of Marine Ecological
 Data* — for the **North Atlantic Right Whale Consortium (NARWC) annual
 meeting**. Author: Rob Schick.
 
@@ -26,10 +26,11 @@ Adapted from the posit::conf(2025) *Programming with LLMs* full-day workshop
 Things that look like details but are load-bearing. Do not change these without
 asking Rob.
 
-1. **The workshop totals 240 minutes.** `outline.md` has a block table and each
-   `website/workshop-0N.qmd` has `duration:` and `time:` frontmatter. If you
-   change any timing, re-verify that the blocks sum to 240 and that the `time:`
-   values still chain correctly from the 13:00 start.
+1. **The workshop totals 180 minutes, 08:30–11:30.** Cut from 240 on
+   2026-10-23 because the end time is fixed by Rob's flight. `outline.md` has a
+   block table and each `website/workshop-0N.qmd` has `duration:` and `time:`
+   frontmatter. If you change any timing, re-verify that the blocks sum to 180
+   and that the `time:` values still chain correctly from the 08:30 start.
 2. **One dataset, start to finish.** Every exercise reads
    `here::here("data/narw_upcalls.rds")`. Do not introduce a second example
    dataset, and do not change that path in one place only.
@@ -79,10 +80,10 @@ data/                   empty — narw_upcalls.rds goes here
 ## Verify before you call it done
 
 ```bash
-# timings still total 240
+# timings still total 180
 grep -oE '^\| [0-9—] .*\| [0-9]+ \|' outline.md | awk -F'|' '{gsub(/ /,"",$4); s+=$4} END {print s}'
 
-# the qmd clock still chains from 13:00
+# the qmd clock still chains from 08:30
 for f in website/workshop-0*.qmd; do
   printf "%-26s %s %s\n" "$(basename $f)" \
     "$(grep -m1 '^time:' $f | sed 's/time: //')" \
@@ -103,8 +104,8 @@ quarto render website --quiet
 
 ## Out of scope
 
-- Do not commit the up-call dataset if it is not Rob's to redistribute — check
-  first.
+- The up-call dataset is public (DCLDE 2013, NOAA NCEI) and fine to share or
+  commit; still ask before committing a large binary to git.
 - Do not push to any remote without asking.
 - The parent posit::conf repo at `~/Documents/_research/rrr/llm` is Posit's, not
   Rob's. Read it for reference; never commit to it.

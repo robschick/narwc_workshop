@@ -3,5 +3,5 @@ title: "☕ Break"
 description: "Ten minutes."
 description-short: "Coffee, briefly."
 duration: 10min
-time: "15:40"
+time: "10:45"
 ---

@@ -3,7 +3,7 @@ title: "Tier 1 — Planning with a chat interface"
 description: "The lowest-commitment surface. Anatomy of a conversation, an analysis plan written by Posit Assistant's /plan mode, and a hard look at hallucination."
 description-short: "Chat as a planning instrument, not a code generator."
 duration: 45min
-time: "13:25"
+time: "08:45"
 ---
 
 ## Slides

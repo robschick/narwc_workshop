@@ -3,7 +3,7 @@ title: "Tier 2a — The assistant in your session"
 description: "Posit Assistant in Positron or RStudio, reading your live session. Exploratory analysis of the call series and pulling environmental covariates from a remote API."
 description-short: "Hands-on EDA and covariates."
 duration: 40min
-time: "14:25"
+time: "09:30"
 ---
 
 ## Slides

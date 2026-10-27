@@ -1,9 +1,9 @@
 ---
-title: "Cold open: zero to a diel pattern"
-description: "The destination first — a live agent run on the raw up-call data, then an honest look at what it got wrong."
+title: "Cold open: napkin to app"
+description: "The destination first: an agent turns a hand-drawn sketch and the raw up-call data into a working Shiny app, then an honest look at what it got wrong."
 description-short: "The wow, then the curtain pulled back."
-duration: 25min
-time: "13:00"
+duration: 15min
+time: "08:30"
 ---
 
 ## Slides
@@ -12,20 +12,26 @@ time: "13:00"
 
 ## Outline
 
-- **(8m) The cold open.** From an empty directory: the raw seven-day up-call
-  detection file, one sentence of intent, and the `pa` agent. It reads the file,
-  describes the columns, plots calls-per-hour against time of day, and flags
-  the diel structure. No narration while it runs.
-- **(4m) Pull the curtain back.** What it got right, what it assumed, and the
-  one thing in the output that is wrong. Set the tone: impressive is not the
-  same as correct.
-- **(5m) Welcome and the map.** The three tiers and what you'll leave with.
-- **(8m) Setup checkpoint.** `_exercises/01_setup-check/`. Posit AI Pass is a
-  sign-in, not a secret, so there are no keys to paste — which is why this is
-  eight minutes and not thirty. Posit Cloud is the fallback. Helpers circulate.
+- **(8m) The cold open.** From an empty directory: a photo of a hand-drawn
+  dashboard sketch, the raw seven-day up-call detection file, and the `pa`
+  agent. It reads the file, describes the columns, and builds a working Shiny
+  app that matches the sketch. No narration while it runs.
+- **(4m) Pull the curtain back.** The app works and looks right, but the daily
+  peak is in the wrong hours: the timestamps are UTC and nobody asked about
+  time zones. Set the tone: a polished, working app can still be wrong.
+- **(3m) Welcome and the map.** The three tiers and what you'll leave with.
+  Nobody builds an app today; that's tier 3, and block 5 shows how.
+
+Setup is done **before** the session, from the [setup page](setup.qmd) and
+`_exercises/01_setup-check/`. Posit AI Pass is a sign-in, not a secret, so there
+are no keys to paste. Anyone whose setup failed goes straight to Posit Cloud;
+helpers point people there rather than troubleshooting in the room.
 
 ## Notes for the instructor
 
-- Pick the deliberate error during dry-run. Do not improvise it.
-- Have a recording of this run as a fallback; the first eight minutes are the
-  worst possible time for a network failure.
+- The error is planted: the timestamps carry no time-zone label and the prompt
+  doesn't mention one. Confirm in dry-run that the agent falls into it every
+  time. Do not improvise it.
+- Keep a recording of a clean run, with the same error, in `_demos/` as the
+  backup; the first eight minutes are the worst possible time for a network
+  failure.

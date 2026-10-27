@@ -5,7 +5,9 @@ title: "Using AI in the Analysis of Marine Ecological Data"
 A half-day, hands-on workshop on three complementary ways to use AI in an
 analytical workflow — from lowest to highest commitment — worked end to end on
 a single dataset: seven days of DCL/DE detections of North Atlantic right whale
-up-calls.
+up-calls, from the publicly available
+[DCLDE 2013 dataset](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncei.pad%3ADCLDE_2013)
+(NOAA NCEI).
 
 - **Tier 1 — a chat interface**, for planning an analysis and reasoning about
   which model suits the data. Posit Assistant's `/plan` mode writes the plan to
@@ -14,7 +16,7 @@ up-calls.
   in Positron or RStudio:
   exploratory analysis, environmental covariates from a remote API, and a
   log-Gaussian Cox process with self-excitement.
-- **Tier 3 — a command-line agent** (`pa`) turned loose on a real repository:
+- **Tier 3 — a command-line agent** (`pa`) working on a real repository:
   implementation, refactoring, manuscript documentation, and project tracking.
 
 All three tiers are the same product — [Posit Assistant](https://assistant.posit.co),

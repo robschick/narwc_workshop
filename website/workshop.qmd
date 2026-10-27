@@ -17,8 +17,8 @@ listing:
       - "workshop-*.qmd"
 ---
 
-Times below assume a 13:00 start; shift them as needed. Total running time is
-four hours including two breaks.
+The workshop runs 08:30–11:30: three hours including one break. Please
+complete the [setup instructions](setup.qmd) before the day.
 
 ::: {#schedule}
 :::

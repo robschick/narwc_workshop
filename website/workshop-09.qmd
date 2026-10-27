@@ -3,7 +3,7 @@ title: "Wrap-up"
 description: "Where this is going, where the materials live, and the answer to the question in the abstract."
 description-short: "Close and feedback."
 duration: 5min
-time: "16:55"
+time: "11:25"
 ---
 
 ## Outline

@@ -1,17 +1,10 @@
-The repo is initialized and all 39 files are staged on branch `main`,
-but the first commit could not be made from the sandbox (it can't delete
-git's temp files there). Run this in your own terminal:
+Done — repo initialized, committed and pushed on 2026-10-23.
 
-  cd ~/Documents/_research/git_repos/narwc_workshop
-  rm -f .git/stale-index-lock
-  find .git/objects -name 'tmp_obj_*' -delete
-  git commit -m "Initial import: NARWC half-day AI workshop scaffold"
+This file has served its purpose and can be removed:
 
-Then, when you're ready to push:
+  git rm NEXT_STEP.txt && git commit -m "Remove setup notes"
 
-  gh repo create narwc_workshop --private --source=. --push
-
-Then delete this file and the old copy:
-
-  rm NEXT_STEP.txt
-  rm -rf ~/Documents/_research/rrr/llm/workshop_2026
+Its earlier advice to delete ~/Documents/_research/rrr/llm/workshop_2026 was
+premature and has been retracted. See the "Loose ends from the move" section of
+HANDOFF.md: that folder stays until Posit replies about AI Pass seats, because
+its _retired/ directory holds the bring-your-own-key fallback setup checks.

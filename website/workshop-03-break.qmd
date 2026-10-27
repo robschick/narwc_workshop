@@ -1,7 +1,0 @@
----
-title: "☕ Break"
-description: "Fifteen minutes."
-description-short: "Coffee."
-duration: 15min
-time: "14:10"
----

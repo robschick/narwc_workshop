@@ -18,8 +18,9 @@ the open items are decisions, not code.
 
 ## Where things stand
 
-The outline is **done and verified** — 240 minutes, two breaks, timings chained
-from a 13:00 start. The Quarto site has one page per block. The exercise folders
+The outline is **done and verified** — 180 minutes, one break, timings chained
+from an 08:30 start to 11:30. (Cut from four hours on 2026-10-23 to make a
+flight; see the note under the arc table in `outline.md` for what went.) The Quarto site has one page per block. The exercise folders
 have their task structure written out in comments; they are teaching scaffolds,
 not working programs.
 
@@ -66,28 +67,36 @@ Don't relitigate these without a reason; each was a deliberate call.
 
 | Decision | Why |
 |---|---|
-| 4 hours, two breaks | Fits the NARWC half-day slot |
+| 3 hours, one break, 08:30–11:30 | Hard end time: Rob's flight. Was 4 hours, two breaks until 2026-10-23 |
 | Hands-on for tiers 1–2 only; tier 3 is watched | Keeps the agentic finale from becoming a support clinic |
 | Wow → feet dirty → sit back | Rob's framing. Attention is highest at the start and lowest at the end, so the heavy typing goes in the middle |
-| Tier 3 = recorded spine + one live task | Recording protects the timing; the live task proves it's real |
+| Tier 3 = recording only, 15 minutes | The live task was cut in the move to three hours; the recording protects the timing |
 | Posit Assistant throughout, `pa` for tier 3 | One product across three surfaces, so escalating a tier changes autonomy, not vendor |
-| Cold open has a *planted* error | Buys the wow and the credibility to spend the day on verification |
+| Cold open is napkin to Shiny app, with a planted UTC error (2026-10-26) | Buys the wow and the credibility to spend the day on verification; a working app that's wrong makes the point harder than a plot. Backup recording in `_demos/` |
 | Exercise 07 is assistant-off | Verification is the point of the workshop; it needs its own protected block |
 | No API keys | AI Pass; see above |
 | RStudio equal to Positron | Much of the NARWC room has never left RStudio |
 
 ## Open — in the order they block things
 
-1. **Stage `data/narw_upcalls.rds`.** Nothing runs until this exists. Also
-   decide whether it can be committed or must stay local — check redistribution
-   rights before adding it to git.
+1. **Stage `data/narw_upcalls.rds`.** Nothing runs until this exists. The
+   source is the public
+   [DCLDE 2013 dataset](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncei.pad%3ADCLDE_2013)
+   (NOAA NCEI), so redistribution is not a concern.
 2. **Hear back from Posit** on AI Pass seats and a Cloud instructor space. The
-   setup path assumes yes.
-3. **Fill in venue, dates, headcount** in `syllabus.md` before sending it.
+   request went to Posit on 2026-10-26, asking for an answer by November 3.
+   The setup path assumes yes.
+3. **Decide whether tier 3 is hands-on or watched.** Rob's 2026-10-26 edits to
+   the `syllabus.md` overview say "three hands-on components" and that
+   attendees hand the plan file to the agent themselves. The schedule, the
+   outline and the decision table above still say block 5 is a 15-minute
+   recording. Settle this before anything else is written about block 5.
 4. **Pick the repository for the tier 3 agent run.** It must be real, yours, and
    able to survive being projected to a room.
-5. **Dry-run the cold open and choose the deliberate error.** Do not improvise
-   this on the day.
+5. **Dry-run the cold open** (napkin sketch to Shiny app). Confirm `pa` accepts
+   an image, that the build fits in eight minutes, and that the planted UTC
+   error reproduces every time. Check what time zone the DCLDE 2013 timestamps
+   are actually in. Record the backup run.
 6. **Record the tier 3 spine**, chaptered at the five pause points.
 7. **Decide whether attendees install `pa`** or it stays instructor-only. This
    changes the pre-workshop setup burden considerably.
@@ -95,14 +104,20 @@ Don't relitigate these without a reason; each was a deliberate call.
 
 ## Loose ends from the move
 
-- The original lives on at `~/Documents/_research/rrr/llm/workshop_2026/`. This
-  repo is a copy with paths rewritten (`workshop_2026/data/...` → `data/...`).
-  **Delete the original once you're satisfied this copy is good** — keeping both
-  is how they drift.
-- `_retired/` (the superseded API-key setup checks) was deliberately not copied.
-  It's still in the old location if you want it.
-- No initial commit yet — the sandbox this was built from has no git identity.
-  See below.
+- The original still lives at `~/Documents/_research/rrr/llm/workshop_2026/`.
+  This repo is a copy with paths rewritten (`workshop_2026/data/...` →
+  `data/...`). **Decision 2026-10-23: keep it for now, delete after Posit
+  replies.** Do not suggest deleting it before then.
+
+  The reason it is still worth something: three files exist only there —
+  `_retired/01_api.R`, `_retired/02_assistant.md`, `_retired/03_agent.sh`, the
+  API-key setup checks from before the Posit Assistant re-plumbing. If Posit
+  declines the AI Pass seats, the setup path falls back to bring-your-own-key
+  and those three are exactly that fallback. Everything else in the old folder
+  is either byte-identical to this repo or regenerable build output.
+
+  Note it was never committed to the posit clone (it shows as untracked), so
+  deleting it is unrecoverable except from this repo.
 
 ## First commands
 
@@ -119,6 +134,38 @@ quarto preview website                                       # check it renders
 stack it uses, and the two asks (AI Pass seats, a Cloud instructor space).
 
 It also exists as a Claude doc at
-<https://claude.ai/artifact/4gyMGsWVSjseJPKvSFG2Xs>, which is the shareable,
-commentable version. **The two can drift.** Decide which is canonical — the
-file is easier for an agent to revise, the doc is easier to send to a person.
+<https://claude.ai/artifact/4gyMGsWVSjseJPKvSFG2Xs>, the shareable, commentable
+version. **In practice Rob edits the Claude docs**, so treat them as the
+source and the files as synced copies: before changing a file, check the doc
+for newer edits. On 2026-10-23 the request section moved into its own doc,
+mirrored here as `posit-request.md`
+(<https://claude.ai/artifact/1cpe7JVm4xJF4roC3BXsMz>). Instructor-only notes
+live in a third doc, "Workshop planning — things to consider"
+(<https://claude.ai/artifact/KnRJ6zuoeEqPLZ4xFi2vVg>). All in sync as of
+2026-10-23.
+
+## Session of 2026-10-26
+
+- The request to Posit was sent. `posit-request.md` in the repo is the version
+  from before Rob's final redraft, so the sent text may differ.
+- Posit does not need to approve the syllabus. Rob will keep making small
+  changes to it up to the workshop.
+- **`syllabus.md` is now ahead of its Claude doc.** Rob edited the file
+  directly in VS Code (the overview, the Shiny cold open, "Like it or not…").
+  Ask which copy is the main one before syncing in either direction.
+- `syllabus.pdf` sits at the repo root (rendered with Quarto and Typst from a
+  scratch copy that adds title settings and table widths). It is not in
+  `.gitignore` yet.
+- **Next task: a separate, more detailed public syllabus for GitHub Pages.**
+  It probably belongs in the Quarto `website/`. Not started.
+- Still open in `syllabus.md`:
+  - The block 4 text promises a KS test, but exercise 07 has only a QQ plot.
+  - The Positron/RStudio rows say block "3, 4"; they should say 2–4.
+  - "The final block is watched" should be plural.
+  - Rob's own edits have typos: "distram", "shiny", "scientist's",
+    "using local model", "knowledge matters".
+  - Block 5's output reads "README + PR with a code-flow diagram" in the
+    overview but "manuscript documentation" in block 5.
+  - "Two features…" paragraph: Rob hasn't chosen a rewrite.
+- Cold open dry-run checks: whether `pa` accepts an image, and what time zone
+  the DCLDE 2013 timestamps are actually in.
