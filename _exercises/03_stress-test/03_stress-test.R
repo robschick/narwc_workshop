@@ -2,13 +2,18 @@
 # Time: 10 minutes. Work in pairs for part 2.
 
 library(ellmer)
+library(dplyr)
 library(ggplot2)
+library(lubridate)
 
 calls <- readRDS(here::here("data/narw_upcalls.rds"))
 
 # Part 1: a real figure --------------------------------------------------------
 # Plot hourly call rate, save it, and ask the model to interpret it
 # ecologically. Note how confident the answer is.
+
+calls <- calls |>
+  mutate(hour = hour(with_tz(time, "Etc/GMT+5")))  # local hour; `time` is UTC
 
 p_real <- ggplot(calls, aes(hour)) +
   geom_bar() +

@@ -103,8 +103,8 @@ tables:
         constraints: [required]
         description: >
           Day of the deployment, 1 = 28 March 2009, counted by local (EST) date.
-          Note this is local while `time` displays in UTC, so a call shortly
-          after local midnight is on the next `day` but may show the previous
+          Note this is local while `time` displays in UTC, so a call from
+          19:00 local onwards is still on the same `day` but shows the next
           UTC date.
         range: [1, 7]
     constraints:
