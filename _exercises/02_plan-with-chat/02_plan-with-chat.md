@@ -13,7 +13,8 @@ Write one message that covers all of:
 
 - what the detector produces, and its false-positive behaviour
 - the temporal extent and resolution
-- the spatial arrangement of the recorders
+- the recorder and its channel (these data come from a single recorder, so
+  there is no spatial dimension)
 - the covariates you can get hold of
 - what you actually want to learn
 
