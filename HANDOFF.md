@@ -169,3 +169,50 @@ live in a third doc, "Workshop planning — things to consider"
   - "Two features…" paragraph: Rob hasn't chosen a rewrite.
 - Cold open dry-run checks: whether `pa` accepts an image, and what time zone
   the DCLDE 2013 timestamps are actually in.
+
+## Sessions of 2026-10-27 to 10-29
+
+Tier 3 and the end of the morning were redesigned through a grilling
+session. This supersedes open items 1, 3, 4 and 7 above, and the tier 3 rows
+of the decision table.
+
+- **Data staged** (`c61793d`). `data/narw_upcalls.rds` comes from the raw log
+  in `data/raw/` and is documented in `data/data-dict.yaml` (tidyverse
+  data-dict format). Duplicates, log order and `Possibly_Detected` are kept
+  on purpose. `time` is stored in UTC and `day` is the local (EST) date.
+- **Tier 3 (10:55–11:15) is hands-on.** Attendees run the agent in the IDE pane
+  in Normal approval mode, and `pa` is instructor-only. The agent fits a
+  deliberately wrong Poisson GLM from the attendee's own plan; the canonical
+  plan is the fallback. Commit before the run, read the Git diff after.
+  Sticky notes signal "stuck"; anyone with nothing to show after 8 minutes
+  watches the projector, and if a third of the room is stuck, everyone
+  switches to the recording. The last 4 minutes are a cut of Rob's recorded
+  full workflow.
+- **The tier 2b model** is an mgcv GAM LGCP (no INLA, no self-excitation).
+  Exercise 07 supplies code for four checks, plus the always-passing total
+  check as a deliberate trap.
+- **Safety, 11:15–11:23:** demo (b) live ("what have you seen of `calls`?"),
+  then (a) a pre-recorded Ollama swap. Attendees don't install Ollama.
+- **Wrap-up, 11:23–11:30:** a best-practices cheatsheet in the RStudio style,
+  covering git/GitHub, sandboxing, synthetic data, AgentsView and roborev.
+- **The recording:** 9 chapters, about 22 minutes, on a new repo with the
+  up-call data. It ends with a tour of `sne_ns01`. The script is still to
+  be written, in `_demos/`.
+- **Environment:** Posit Cloud first; failing that, GitHub plus pre-workshop
+  office hours.
+- **Dry run:** follow `DRY_RUN.md` before any rewrites.
+
+### Rewrites waiting on the dry run
+
+- `outline.md`, the `website/` block pages, and `syllabus.md`: the new timings
+  and the tier 3 / safety / wrap-up structure. Timings must still total 180.
+- Exercise 02: tell attendees to choose "Keep planning", and create
+  `.posit/assistant/plans/` in advance. Narrow the `.posit/` rule in
+  `.gitignore` so the plan can be committed.
+- Exercise 03: it calls `chat("anthropic/claude-sonnet-4-5")` through ellmer,
+  which needs an API key and breaks non-negotiable 7. Rework it for the
+  Posit Assistant pane.
+- Exercise 06: replace the self-exciting LGCP with the mgcv GAM.
+- Exercise 07: the four checks, plus the trap.
+- Exercise 08: turn the follow-along README into the tier 3 hands-on exercise.
+- Exercise 09: Ollama becomes take-home only.
