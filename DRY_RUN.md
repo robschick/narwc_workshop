@@ -83,8 +83,11 @@ Close the assistant pane. Do these by hand on `fit_gam`:
       Note the value.
 - [ ] **Residual ACF:** `acf(residuals(fit_gam, "pearson"))`. Is there
       clustering left over?
-- [ ] **Gaps, rescaled:** on calls sorted by `time`, integrate the fitted
-      hourly intensity between successive calls (time rescaling). If the
+- [ ] **Gaps, rescaled:** take **exactly the calls you counted for the fit**
+      (if you dropped `Possibly_Detected` or duplicates there, drop them
+      here too), sort by `time`, and integrate the fitted hourly intensity
+      between successive calls (time rescaling). Duplicate start times give
+      zero-length gaps; drop them first or note them. If the
       model is right, those rescaled gaps are Exp(1). QQ them against
       Exp(1). Too many short gaps means clustering the model hasn't
       explained. Don't compare raw gaps with one exponential at the mean
@@ -93,7 +96,9 @@ Close the assistant pane. Do these by hand on `fit_gam`:
 - [ ] Is the time-rescaling code short enough to hand to attendees, and is
       the QQ plot readable without explanation?
 - [ ] Pre-check by Claude (2026-10-29), with an hourly GAM
-      `n ~ s(hour, bs = "cc") + s(bin, k = 40)` in local time:
+      `n ~ s(hour, bs = "cc") + s(bin, k = 40)` in local time, using all
+      8,256 rows for both the fit and the rescaling (so the 5 duplicate
+      pairs give 5 zero gaps):
       - dispersion ≈ 17
       - rescaled gaps clearly not Exp(1): the 99th percentile is 10.1 against
         4.6, and the median 0.47 against 0.69, i.e. bursts and long silences
