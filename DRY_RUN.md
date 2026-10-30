@@ -83,9 +83,25 @@ Close the assistant pane. Do these by hand on `fit_gam`:
       Note the value.
 - [ ] **Residual ACF:** `acf(residuals(fit_gam, "pearson"))`. Is there
       clustering left over?
-- [ ] **Gaps:** on calls sorted by `time`, compare time-between-calls with an
-      exponential at the same mean rate (QQ plot or overlaid histograms).
-      Too many short gaps?
+- [ ] **Gaps, rescaled:** on calls sorted by `time`, integrate the fitted
+      hourly intensity between successive calls (time rescaling). If the
+      model is right, those rescaled gaps are Exp(1). QQ them against
+      Exp(1). Too many short gaps means clustering the model hasn't
+      explained. Don't compare raw gaps with one exponential at the mean
+      rate: the daily cycle alone produces extra short gaps that way, even
+      when the model is right.
+- [ ] Is the time-rescaling code short enough to hand to attendees, and is
+      the QQ plot readable without explanation?
+- [ ] Pre-check by Claude (2026-10-29), with an hourly GAM
+      `n ~ s(hour, bs = "cc") + s(bin, k = 40)` in local time:
+      - dispersion ≈ 17
+      - rescaled gaps clearly not Exp(1): the 99th percentile is 10.1 against
+        4.6, and the median 0.47 against 0.69, i.e. bursts and long silences
+      - hourly residual ACF is *negative* at lags 1–3 (−0.1, −0.41, −0.14),
+        so at hourly bins the ACF mostly reflects the time smooth, not
+        clustering
+
+      Confirm on your own fit. The ACF check may need finer bins or dropping.
 - [ ] Note which of these *clearly* shows something wrong on the real data.
       If none does at hourly resolution, the exercise needs a finer bin or a
       different check.
