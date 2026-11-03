@@ -13,7 +13,7 @@ narwc_workshop/
 ├── website/                # Quarto site: one page per block, listing-driven schedule
 ├── _exercises/             # numbered stubs, one folder per exercise
 ├── _solutions/             # (empty — fill as exercises firm up)
-├── _demos/                 # (empty — cold open + agent recording live here)
+├── _demos/                 # cold-open/ starting kit; recordings live here too
 └── data/                   # (empty — stage narw_upcalls.rds here)
 ```
 

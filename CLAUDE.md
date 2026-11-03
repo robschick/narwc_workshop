@@ -61,7 +61,7 @@ syllabus.md             the Posit-facing syllabus (also a Claude doc — see HAN
 website/                Quarto site, one page per block, listing-driven schedule
 _exercises/NN_name/     numbered stubs; task structure in comments, not filler code
 _solutions/             empty — fill as exercises settle
-_demos/                 empty — cold open + tier 3 recording live here
+_demos/                 cold-open/ starting kit (run from a copy outside the repo), recording script
 data/                   empty — narw_upcalls.rds goes here
 ```
 

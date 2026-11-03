@@ -155,7 +155,10 @@ Close the assistant pane. Do these by hand on `fit_gam`:
 
 ## 6. Cold-open checks (separate, but do them while set up)
 
-- [ ] Does `pa` accept the napkin sketch image (`shiny_demo/plans/Shiny_Demo_Drawing.png`)?
+- [ ] Run each attempt from a copy **outside any repo**, e.g.
+      `cp -r _demos/cold-open ~/Desktop/cold-open-run1`, and start `pa` there.
+      Inside this repo the agent can read notes that describe the UTC trap.
+- [ ] Does `pa` accept the napkin sketch image (`Shiny_Demo_Drawing.png`)?
 - [ ] Build the app from the sketch. Does it plot by hour in **UTC** (the
       planted error) without being prompted? Run it three times. How often?
 - [ ] Build time: ___ min (slot: 8).
