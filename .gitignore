@@ -8,3 +8,6 @@
 /website/_site/
 /website/.quarto/
 .posit/
+# roborev snapshots
+/.roborev/
+.Rproj.user
