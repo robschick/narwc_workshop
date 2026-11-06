@@ -7,7 +7,8 @@
 #      Same pane, same workflow, same /plan mode — only the provider changed.
 #      Re-ask the exercise 02 planning question and compare the answer.
 #
-#   2. Or call it directly, below.
+#   2. Or call it directly from R with {ellmer}, below. Not installed by
+#      _setup.R: install.packages("ellmer") first.
 
 library(ellmer)
 

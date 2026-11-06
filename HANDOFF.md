@@ -210,9 +210,8 @@ of the decision table.
 - Exercise 02: tell attendees to choose "Keep planning", and create
   `.posit/assistant/plans/` in advance. Narrow the `.posit/` rule in
   `.gitignore` so the plan can be committed.
-- Exercise 03: it calls `chat("anthropic/claude-sonnet-4-5")` through ellmer,
-  which needs an API key and breaks non-negotiable 7. Rework it for the
-  Posit Assistant pane.
+- ~~Exercise 03: rework for the Posit Assistant pane.~~ Done 2026-11-06,
+  with exercise 05; see below.
 - Exercise 06: replace the self-exciting LGCP with the mgcv GAM.
 - Exercise 07: the four checks, plus the trap.
 - Exercise 08: turn the follow-along README into the tier 3 hands-on exercise.
@@ -286,10 +285,37 @@ was wrong, and whether the agent slipped into UTC depended on how it parsed.
 Rather than strip the offsets to force the error, the cold open now ends in a
 live check on where the dusk shading starts. The materials' local clock is
 UTC−5 (the file's offset, the data dictionary, `day`, exercise 02), and on it
-sunset is about 18:05 and civil dusk about 18:35 (suncalc, 42.4 N 70.4 W:
-sunset 18:04 on 28 March, 18:11 on 3 April). About 23:00 means UTC; about
+sunset is about 18:05 and civil dusk about 18:35 (suncalc at the recorder, 42.066 N 70.2719 W:
+sunset 18:03 on 28 March, 18:10 on 3 April). About 23:00 means UTC; about
 19:05 means the EDT wall clock, acceptable only if the axis says EDT. The
 first draft of this called 19:05 EDT right, which contradicted the data
 dictionary; a roborev review caught it. The outline and
 syllabus also now describe the sketch as drawn (dropdown, detection timeline
 shaded dusk to dawn, hourly bars), not a day selector.
+
+### ellmer out of the session (2026-11-06)
+
+Exercises 03 and 05 called `chat("anthropic/claude-sonnet-4-5")` through
+ellmer, which failed in Cloud on `ANTHROPIC_API_KEY` and broke non-negotiable 7.
+Rob's call: drop ellmer from the session and mention it on one wrap-up slide.
+It's a fourth thing beside the three tiers (a model as a function in your own
+code), and it brings a package, an API and a key with it, none of which serve
+the lesson for an audience new to AI.
+
+- **Exercise 03** is now `03_stress-test.md`, in the pane. Both figures are
+  shipped pre-made with neutral names (`figure_a.png`, `figure_b.png`), built
+  by `_solutions/03_stress-test/make_figures.R` (seed 2026). The pane can see
+  the live session, so making the noise figure in-session would show it
+  `sample()`. Each figure gets a fresh chat. Added `notes.md`.
+- **Exercise 05** is now `05_covariates-erddap.md`, in the pane: cold ask with
+  web search off, then `@docs.md`.
+- `_setup.R` no longer installs ellmer or brio. Exercise 09 (take-home) still
+  uses ellmer with Ollama, which needs no key, and says to install it.
+- `posit-request.md` question 1 (ellmer and AI Pass) no longer matters for the
+  session.
+
+Open, for the dry run: figure B is near-flat (uniform noise), so the model may
+correctly call it patternless, and the exercise needs a figure that *looks*
+like a pattern. The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
+is now in the data dictionary and in exercise 05 step 4.
+

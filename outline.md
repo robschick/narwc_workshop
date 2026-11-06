@@ -205,6 +205,10 @@ full-day version — it is what makes pre-session setup realistic at all.
 ## Block 7 — Wrap-up (5m)
 
 - Where this is going next. Brief, non-breathless.
+- One slide on ellmer, as the next step for anyone who wants it: the same
+  models, called as a function from your own R code, so a model can sit inside
+  a script, a Shiny app or a pipeline. Not used in the session; it needs its
+  own API key, and the three tiers don't need it.
 - Where the materials live, how to keep going, feedback survey.
 - Answer the abstract's closing question.
 
