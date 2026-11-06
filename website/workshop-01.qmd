@@ -17,8 +17,8 @@ time: "08:30"
   agent. It reads the file, describes the columns, and builds a working Shiny
   app that matches the sketch. No narration while it runs.
 - **(4m) Check it, live.** The app works and looks right. Is it? On the
-  recorder's clock (UTC−5), sunset in late March is about 18:05; does the
-  dusk shading start there? Set the tone: the question is "is it right?", not "did it
+  recorder's clock (UTC−5), sunset in late March is about 18:05 and civil
+  dusk about 18:35; does the dusk shading start between them? Set the tone: the question is "is it right?", not "did it
   run?"
 - **(3m) Welcome and the map.** The three tiers and what you'll leave with.
   Nobody builds an app today; that's tier 3, and block 5 shows how.
