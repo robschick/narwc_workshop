@@ -59,8 +59,9 @@ five minutes.*
 > people came to see.
 
 - **(8m) The cold open.** Live, from an empty directory. Hand the `pa` agent a
-  photo of a hand-drawn sketch of a dashboard (calls per hour by time of day,
-  a day selector) and the raw seven-day up-call file. It reads the file,
+  hand-drawn sketch of a dashboard (a dropdown that switches between a
+  timeline of individual detections, shaded dusk to dawn, and calls per hour
+  of day) and the raw seven-day up-call file. It reads the file,
   describes the columns, and builds a working Shiny app that matches the
   sketch. Do not narrate while it runs; let the room read the screen.
 - **(4m) Pull the curtain back.** The app works and looks right. Then the

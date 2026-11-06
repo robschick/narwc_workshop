@@ -87,7 +87,8 @@ block is watched rather than typed, because by then attention is lowest.
 
 **Block 1** opens cold, with no slides: a hand-drawn sketch of a dashboard, the
 raw detection file, and an agent that turns them into a working Shiny app
-showing calls per hour by time of day. Four minutes are then spent on an error
+showing each detection on a timeline shaded dusk to dawn, and calls per hour
+of day. Four minutes are then spent on an error
 deliberately planted in it, which sets the tone for the day: a polished, working
 app can still be wrong. A recording of the run is ready as a backup. Setup is done before the session, from
 the workshop site, with Posit Cloud as the fallback for anyone it fails for.

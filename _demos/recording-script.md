@@ -124,8 +124,11 @@ caption "15 minutes of questions, condensed".
 
 > Turn this into a spec in docs/spec.md: the model, the data decisions we
 > made, and acceptance checks. Include a time-rescaling QQ against Exp(1),
-> observed vs expected calls by day and by hour, and a comparison with a
-> Poisson model without self-excitation.
+> using exactly the calls each model was fitted to, with tied start times
+> handled one stated way; observed vs expected calls by day and by hour; a
+> comparison with a Poisson model without self-excitation; and trace plots
+> and effective sample sizes for the chain, with a minimum ESS below which
+> the fit isn't used.
 
 **Show:** scroll the spec slowly. Stop on the acceptance checks.
 
@@ -228,7 +231,12 @@ time-varying rate alone fails. Both were in commits Claude had made.
 **Say:**
 - "This is the model you fit the wrong version of in tier 3. Same data."
 - "The Poisson model isn't stupid. It gets the daily rhythm. What it misses
-  is that whales answer each other."
+  is that calls come in bursts. Whales answering each other is one
+  explanation. So is one whale calling repeatedly, more whales passing
+  through, the detector, or something in the water we didn't model. The
+  model tells you there's clustering, not why."
+- Show the trace plots and ESS before the kernel. If the chain fails the
+  spec's ESS check, say so and don't read the kernel off it.
 - Be honest about the short chain: "This is a short chain to fit the
   recording. The real fits run 150,000 iterations on a cluster, and I'd
   want that before I'd publish a number."
@@ -296,8 +304,10 @@ questions, then pick up again.
 - **The sampler won't adapt.** Stop, fix it yourself, and say what you did
   in the voice-over. "Here's where I had to step in" is one of the most
   useful things the full cut can show.
-- **The fit doesn't finish.** Use the chain as far as it got and say how
-  long it ran.
+- **The fit doesn't finish.** Show the chain as far as it got and say how
+  long it ran. If it fails the ESS check, call it unusable on camera and
+  show the diagnostics, not the kernel. That's still a useful thing to
+  film.
 - **The Hawkes QQ isn't clearly better.** Don't hide it. Show it, and say
   what that tells you (chain too short? kernel wrong?). Then decide whether
   to re-record chapter 6 after a longer run.
