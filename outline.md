@@ -119,7 +119,10 @@ full-day version — it is what makes pre-session setup realistic at all.
   looking figure built from made-up data and ask the same question. In pairs, try to
   get a confident, wrong interpretation out of it. *(Directly adapted from the
   parent repo's `12_plot-image-1` / `13_plot-image-2` pair — one of the
-  strongest teaching beats in the original, and it transfers unchanged.)*
+  strongest teaching beats in the original. Changed in one way: the parent
+  used structureless noise, and here the second figure has a made-up daily
+  cycle, so the test is an unsupported ecological explanation, not seeing a
+  pattern in noise.)*
 - **(10m) Turning a conversation into an artifact.** `/plan` in Posit
   Assistant. It explores read-only, asks clarifying questions, and writes a
   timestamped markdown plan to `.posit/assistant/plans/`. Attendees then edit
@@ -224,7 +227,7 @@ full-day version — it is what makes pre-session setup realistic at all.
 | Choosing a model | Cut as a block; one slide in block 6 |
 | Vision / PDF input | Cut, except the figure-interpretation use in block 2 |
 | Structured output, batch | Cut — a full-day topic |
-| Plot-vs-noise hallucination demo | **Kept nearly intact**, block 2 |
+| Plot-vs-noise hallucination demo | **Kept, adapted**, block 2: the second figure is made-up data with a daily cycle, not noise |
 | Coding assistant with docs in context | **Kept, re-skinned** to ERDDAP, block 3 |
 | API-key setup and sharing app | Cut — Posit AI Pass replaces it |
 | RAG | Cut — mention only |
