@@ -1,8 +1,11 @@
-# Run once before the workshop. Installs what the exercises use and checks
-# that the dataset loads.
+# Run once before the workshop. Installs what the exercises use, creates the
+# folder /plan writes to, and checks that the dataset loads.
 
 pkgs <- c("here", "dplyr", "lubridate", "ggplot2", "readr", "ellmer")
 install.packages(setdiff(pkgs, rownames(installed.packages())))
+
+# Posit Assistant's /plan mode writes here (exercise 02).
+dir.create(here::here(".posit/assistant/plans"), recursive = TRUE, showWarnings = FALSE)
 
 calls <- readRDS(here::here("data/narw_upcalls.rds"))
 stopifnot(nrow(calls) == 8256)
