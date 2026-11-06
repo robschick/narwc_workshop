@@ -50,6 +50,22 @@ wrong. These notes become the exercise rewrites.
 - [ ] Keep this plan. It becomes the canonical fallback plan (Q4), so keep
       it short and correct.
 
+## 1b. Exercises 03 and 05, in the pane
+
+- [ ] **03:** follow `_exercises/03_stress-test/03_stress-test.md`. Can you
+      attach a PNG in the RStudio pane? Does figure B (near-flat noise) get a
+      confident interpretation, or does it say "no pattern" straight away? If
+      the latter, the exercise needs a noise figure that looks patterned.
+- [ ] **03:** did either chat read files or objects you didn't attach (the
+      exercise file says which figure is real)?
+- [ ] **05:** with web search off, does the cold ask still look up
+      `rerddapXtracto`'s help, since `_setup.R` installs it? If so, the cold
+      ask isn't cold. Note what it read.
+- [ ] **05:** does `@docs.md` attach the file in RStudio?
+- [ ] **05 step 4:** what recorder location did you use? Nothing in the repo
+      gives coordinates.
+- [ ] Time each: ___ min (03, slot 10) and ___ min (05, slot 17).
+
 ## 2. Tier 2b: the GAM LGCP (20 min slot)
 
 Exercise 06 still says "self-exciting". Ignore it and ask for the decided

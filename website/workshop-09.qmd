@@ -9,6 +9,10 @@ time: "11:25"
 ## Outline
 
 - Where this is going next. Brief, non-breathless.
+- Next step, if you want it: [ellmer](https://ellmer.tidyverse.org) calls the
+  same models from your own R code, so a model can sit inside a script, a
+  Shiny app or a pipeline. It needs an API key of its own, which is why it
+  isn't used today.
 - Where the materials live and how to keep going.
 - Feedback survey.
 - Answer the abstract's closing question.

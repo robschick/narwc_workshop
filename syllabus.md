@@ -53,8 +53,8 @@ never has to switch vendors to move up a tier.
 | [`pa` terminal TUI](https://assistant.posit.co/downloads/tui/) | Tier 3. The agentic finale on a real repository: first step-by-step with the instructor approving each action, then given the plan file in one command and left to run on its own | 1, 5 |
 | [Posit AI Pass](https://docs.posit.co/posit-ai/user/) | Sign-in-once access with no API keys to manage; removes key provisioning from the setup path entirely | all |
 | [Posit Cloud](https://docs.posit.co/cloud/guide/teach/index.html) | Instructor space with the project pre-built, as the fallback for anyone whose laptop fights the local install | all |
-| [ellmer](https://ellmer.tidyverse.org) | Programmatic LLM calls from R, for the scripted exercises and the Ollama comparison | 2, 3, 6 |
-| Ollama (via Posit Assistant and ellmer) | Local-model closing segment; Posit Assistant supports local models alongside Anthropic, OpenAI and Gemini | 6 |
+| [ellmer](https://ellmer.tidyverse.org) | Calling models from your own R code. Not used in the session; introduced at the wrap-up as the next step | 7 |
+| Ollama (via Posit Assistant) | Local-model closing segment; Posit Assistant supports local models alongside Anthropic, OpenAI and Gemini | 6 |
 
 Two features of the Posit stack do real pedagogical work here rather than just
 appearing in the syllabus. Plan Mode writes a plan to a file, which is precisely
