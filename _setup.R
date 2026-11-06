@@ -1,7 +1,7 @@
 # Run once before the workshop. Installs what the exercises use, creates the
 # folder /plan writes to, and checks that the dataset loads.
 
-pkgs <- c("here", "dplyr", "lubridate", "ggplot2", "readr", "rerddapXtracto")
+pkgs <- c("here", "dplyr", "lubridate", "ggplot2", "readr", "jsonlite", "tibble", "rerddapXtracto")
 install.packages(setdiff(pkgs, rownames(installed.packages())))
 
 # Posit Assistant's /plan mode writes here (exercise 02).
