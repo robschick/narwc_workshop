@@ -304,8 +304,8 @@ the lesson for an audience new to AI.
 
 - **Exercise 03** is now `03_stress-test.md`, in the pane. Both figures are
   shipped pre-made with neutral names (`figure_a.png`, `figure_b.png`), built
-  by `_solutions/03_stress-test/make_figures.R` (seed 2026). The pane can see
-  the live session, so making the noise figure in-session would show it
+  by `_solutions/03_stress-test/make_figures.R` (seed 2). The pane can see
+  the live session, so making the made-up figure in-session would show it
   `sample()`. Each figure gets a fresh chat. Added `notes.md`.
 - **Exercise 05** is now `05_covariates-erddap.md`, in the pane: cold ask with
   web search off, then `@docs.md`.
@@ -315,9 +315,12 @@ the lesson for an audience new to AI.
   session.
 
 Figure B was first uniform noise, which came out flat and obviously noise.
-It is now random but shaped like a daily cycle (two random sinusoids plus
+It is now made-up data with a made-up daily cycle (two random sinusoids plus
 gamma scatter, seed 2), with peaks near dawn and dusk, so it invites a
 crepuscular story. Part 3 now asks attendees to get "I can't tell from this
-figure alone" rather than "there is no pattern". The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
+figure alone" rather than "there is no pattern". A roborev review pointed
+out that the cycle is built in, so a model that sees it is right; the
+materials now say "made-up data", and the lesson is unsupported ecological
+explanation, not seeing a pattern in noise. The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
 is now in the data dictionary and in exercise 05 step 4.
 

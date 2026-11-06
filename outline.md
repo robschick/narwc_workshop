@@ -116,7 +116,7 @@ full-day version — it is what makes pre-session setup realistic at all.
   would need to know that you haven't told it.
 - **(10m) Exercise `03_stress-test`.** The honesty exercise. Show the model a
   figure and ask for an ecological interpretation; then show it a plausible-
-  looking figure built from noise and ask the same question. In pairs, try to
+  looking figure built from made-up data and ask the same question. In pairs, try to
   get a confident, wrong interpretation out of it. *(Directly adapted from the
   parent repo's `12_plot-image-1` / `13_plot-image-2` pair — one of the
   strongest teaching beats in the original, and it transfers unchanged.)*
