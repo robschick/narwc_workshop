@@ -53,9 +53,9 @@ wrong. These notes become the exercise rewrites.
 ## 1b. Exercises 03 and 05, in the pane
 
 - [ ] **03:** follow `_exercises/03_stress-test/03_stress-test.md`. Can you
-      attach a PNG in the RStudio pane? Does figure B (near-flat noise) get a
-      confident interpretation, or does it say "no pattern" straight away? If
-      the latter, the exercise needs a noise figure that looks patterned.
+      attach a PNG in the RStudio pane? Figure B is random but has dawn and dusk
+      peaks. Does the model tell a crepuscular story about it? How hard is it
+      to get "I can't tell from this figure alone"?
 - [ ] **03:** did either chat read files or objects you didn't attach (the
       exercise file says which figure is real)?
 - [ ] **05:** with web search off, does the cold ask still look up

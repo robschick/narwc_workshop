@@ -24,7 +24,8 @@ Start **another new chat**, so it can't see the first conversation. Attach
 ## Part 3 — With your partner
 
 Try to get a confident, specific, wrong interpretation of figure B. Then try
-to get it to say "there is no pattern here". Which was easier?
+to get it to say "I can't tell from this figure alone whether that pattern is
+real". Which was easier?
 
 ## Note what happened
 

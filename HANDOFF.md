@@ -314,8 +314,10 @@ the lesson for an audience new to AI.
 - `posit-request.md` question 1 (ellmer and AI Pass) no longer matters for the
   session.
 
-Open, for the dry run: figure B is near-flat (uniform noise), so the model may
-correctly call it patternless, and the exercise needs a figure that *looks*
-like a pattern. The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
+Figure B was first uniform noise, which came out flat and obviously noise.
+It is now random but shaped like a daily cycle (two random sinusoids plus
+gamma scatter, seed 2), with peaks near dawn and dusk, so it invites a
+crepuscular story. Part 3 now asks attendees to get "I can't tell from this
+figure alone" rather than "there is no pattern". The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
 is now in the data dictionary and in exercise 05 step 4.
 
