@@ -73,13 +73,17 @@ Run straight after exercise 04, in the same chat.
 - [ ] **Part 1:** what did it say it had seen? Real values or only summaries?
       Screenshot it: this is the evidence for the data-security talk. Does it
       separate what it read by running code from what you showed it?
+- [ ] Run `what_was_sent()` (part 1). Does it find the conversation, in
+      RStudio and in Cloud (`~/.posit/assistant/workspaces/` there)? Does the
+      list match what the assistant said it had seen? Is `show_sent()`
+      readable on a projector?
 - [ ] Is there a setting to stop the pane seeing the R session at all? If so,
       part 2 should use it instead of restarting R.
 - [ ] **Part 2:** is there an approval setting that makes it ask before running
       code, and what is it called? Did it try to read `narw_upcalls.rds` even
       when told not to?
 - [ ] Did the dictionary-only code convert to UTC−5 as `data-dict.yaml` says?
-- [ ] Time: ___ min (draft slot: 12, i.e. 4 + 8; the stretch part is extra).
+- [ ] Time: ___ min (draft slot: 13, i.e. 5 + 8; the stretch part is extra).
 
 ## 2. Tier 2b: the GAM LGCP (20 min slot)
 

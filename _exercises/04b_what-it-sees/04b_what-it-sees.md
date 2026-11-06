@@ -1,13 +1,13 @@
 # Exercise 04b — What the assistant sees
 
-**Time:** 12 minutes, after exercise 04. **Tool:** the Posit Assistant pane.
+**Time:** 13 minutes, after exercise 04. **Tool:** the Posit Assistant pane.
 
 In exercise 04 the assistant worked in your R session. It could see `calls`,
 run code on it and read the results. Anything it reads goes to the model
 provider. This exercise finds out what that was, and then tries working
 without sending the data at all.
 
-## Part 1 — Ask what it saw (4 min)
+## Part 1 — Ask what it saw, then check (5 min)
 
 Stay in your exercise 04 chat and ask:
 
@@ -18,8 +18,19 @@ Then:
 
 > Which of those did you read by running code, and which did I show you?
 
-Compare the answer with what you'd be allowed to share if these were
-embargoed data, or data under a permit or a data-sharing agreement.
+Now check its answer against its own record. Run this in the console:
+
+```r
+source(here::here("_exercises/04b_what-it-sees/what-was-sent.R"))
+sent <- what_was_sent()
+sent             # one row per thing it sent back to the model, with its size
+show_sent(sent)  # the first few lines of each
+```
+
+Every row is something that left your machine: the output of code it ran,
+a file it read, an image you attached. Does it match what the assistant told
+you? Compare both with what you'd be allowed to share if these were embargoed
+data, or data under a permit or a data-sharing agreement.
 
 ## Part 2 — The dictionary, not the data (8 min)
 
@@ -36,7 +47,8 @@ embargoed data, or data under a permit or a data-sharing agreement.
 4. Read the code before you run it. Did it convert to local time the way the
    dictionary says to? Did it try to open the data anyway?
 5. Now run it yourself, and compare the plot with your exercise 04 version.
-   The model wrote the code; the data never left your machine.
+   Then run `show_sent(what_was_sent())` again. This chat's rows should be
+   the dictionary and nothing from `calls`.
 
 The dictionary only protects you if the assistant can't reach the file.
 Here the data sit in the project, so one approved code run would read them.
