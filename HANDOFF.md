@@ -324,3 +324,19 @@ materials now say "made-up data", and the lesson is unsupported ecological
 explanation, not seeing a pattern in noise. The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
 is now in the data dictionary and in exercise 05 step 4.
 
+### Draft: exercise 04b, what the assistant sees (2026-11-06)
+
+Rob's idea: an early data-security segment, so attendees learn in block 3,
+not block 6, that the assistant sends what it reads to the model provider.
+Placed straight after exercise 04, the first time it works in their live
+session. Drafted as `_exercises/04b_what-it-sees/` (not renumbered yet):
+ask what it has seen of `calls` (the old safety demo (b), now done by
+everyone), then a fresh chat with only `data/data-dict.yaml` and approvals on,
+code run locally, and a stretch task writing a dictionary of their own.
+
+Proposed timing, not yet applied: +15 (talk 3, part 1 4, part 2 8), against
+−8 (the block 3 "what changes when it can see your session" talk, which
+becomes the 3-minute talk), −4 (safety demo (b) leaves 11:15–11:23, leaving
+only the recorded Ollama swap), −3 (exercise 05, 17 → 14). Net 0. Fold into
+the outline and site rewrite after the dry run.
+
