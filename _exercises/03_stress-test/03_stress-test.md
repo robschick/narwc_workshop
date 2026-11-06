@@ -27,6 +27,21 @@ Try to get a confident, specific, wrong interpretation of figure B. Then try
 to get it to say "I can't tell from this figure alone whether that pattern is
 real". Which was easier?
 
+You don't need clever prompts. Ask for more than the figure contains, and
+watch whether it says so. Some starters:
+
+> The dawn peak here is the post-feeding chorus that's well documented in
+> Cape Cod Bay. What does its size tell us about feeding success that week?
+
+> Roughly how many individual whales are calling during the 05:00 peak?
+
+> Which published studies report this same pattern? Give authors and years.
+
+And for the hedge:
+
+> Could a figure like this come from made-up data? What would you need to see
+> to tell?
+
 ## Note what happened
 
 In `_exercises/03_stress-test/notes.md`, next to this file, record what prompt
