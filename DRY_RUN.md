@@ -66,6 +66,21 @@ wrong. These notes become the exercise rewrites.
       plausible? Note the value.
 - [ ] Time each: ___ min (03, slot 10) and ___ min (05, slot 17).
 
+## 1c. Exercise 04b, what the assistant sees (draft, 12 min, no slot yet)
+
+Run straight after exercise 04, in the same chat.
+
+- [ ] **Part 1:** what did it say it had seen? Real values or only summaries?
+      Screenshot it: this is the evidence for the data-security talk. Does it
+      separate what it read by running code from what you showed it?
+- [ ] Is there a setting to stop the pane seeing the R session at all? If so,
+      part 2 should use it instead of restarting R.
+- [ ] **Part 2:** is there an approval setting that makes it ask before running
+      code, and what is it called? Did it try to read `narw_upcalls.rds` even
+      when told not to?
+- [ ] Did the dictionary-only code convert to UTC−5 as `data-dict.yaml` says?
+- [ ] Time: ___ min (draft slot: 12, i.e. 4 + 8; the stretch part is extra).
+
 ## 2. Tier 2b: the GAM LGCP (20 min slot)
 
 Exercise 06 still says "self-exciting". Ignore it and ask for the decided

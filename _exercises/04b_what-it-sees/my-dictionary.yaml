@@ -1,0 +1,15 @@
+# A data dictionary for one table. Fill in what you'd need to tell a colleague
+# who has never seen the data, and nothing they'd need the data itself for.
+# data/data-dict.yaml is a full example.
+
+name:
+description: >
+
+columns:
+  - name:
+    type:            # number, integer, string, datetime, logical ...
+    description: >
+                     # units, time zone, how it was measured, what NA means
+  - name:
+    type:
+    description: >
