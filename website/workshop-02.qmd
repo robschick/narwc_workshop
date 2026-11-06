@@ -19,7 +19,7 @@ time: "08:45"
   design, seven days, detector false-positive rate, available covariates — and
   ask for *candidate models, not code*. Push back on the first answer.
 - **(10m) Exercise: `03_stress-test`.** Ask for an ecological interpretation of
-  a real figure, then of a plausible-looking figure built from noise. In pairs,
+  a real figure, then of a plausible-looking figure built from made-up data. In pairs,
   try to get a confident wrong answer out of the model.
 - **(10m) Turning a conversation into an artifact.** `/plan` in Posit
   Assistant. It explores read-only, asks clarifying questions, and writes a

@@ -97,11 +97,11 @@ the workshop site, with Posit Cloud as the fallback for anyone it fails for.
 and the fact that context is a resource spent deliberately — then has attendees
 describe the dataset and ask for candidate models rather than code. It includes
 a hallucination exercise in which the same figure-interpretation question is
-asked of a real plot and of a plausible-looking plot built from noise. The block
+asked of a real plot and of a plausible-looking plot built from made-up data. The block
 ends with `/plan` writing the analysis plan to a file.
 
 *Verification step (block 2):* compare the assistant's reading of the real plot
-with its reading of the noise plot, then judge whether the `/plan` file is
+with its reading of the made-up plot, then judge whether the `/plan` file is
 specific enough to act on — model form, covariates, and how the fit will be
 checked.
 
