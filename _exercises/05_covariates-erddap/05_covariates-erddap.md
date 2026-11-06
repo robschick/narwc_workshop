@@ -29,6 +29,7 @@ same ask. Compare the two answers.
 
 ## Step 4 — Check it
 
-Run the step 3 version against the real recorder location and a two-day
-window. Sanity-check the values: is that a plausible SST for this place and
+Run the step 3 version against the real recorder location (42.066 N,
+70.2719 W, from `data/data-dict.yaml`) and a two-day window from the
+deployment, e.g. 28–29 March 2009. Sanity-check the values: is that a plausible SST for this place and
 season? The function running is not the same as the data being right.

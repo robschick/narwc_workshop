@@ -12,6 +12,10 @@ details: |
   (<https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncei.pad%3ADCLDE_2013>).
   Public; fine to share and redistribute.
 
+  Recorder location (NOPP6, from the deployment metadata, `DEPLOY_LAT` and
+  `DEPLOY_LON`): 42.066 N, 70.2719 W. Sunset there in late March 2009 is
+  about 18:05 UTC−5, civil dusk about 18:35.
+
   The raw log is `raw/dclde_2013_nefsc_sbnms_200903_nopp6_ch10_detections_NEFSC_SBNMS_200903_NOPP6_CH10_upcall-detection-log.csv`.
   The build is deliberately light-touch: nothing is removed, re-sorted or
   de-duplicated. Rows that need attention before analysis are documented

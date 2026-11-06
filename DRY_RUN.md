@@ -62,8 +62,8 @@ wrong. These notes become the exercise rewrites.
       `rerddapXtracto`'s help, since `_setup.R` installs it? If so, the cold
       ask isn't cold. Note what it read.
 - [ ] **05:** does `@docs.md` attach the file in RStudio?
-- [ ] **05 step 4:** what recorder location did you use? Nothing in the repo
-      gives coordinates.
+- [ ] **05 step 4:** at 42.066 N, 70.2719 W in late March, is the SST
+      plausible? Note the value.
 - [ ] Time each: ___ min (03, slot 10) and ___ min (05, slot 17).
 
 ## 2. Tier 2b: the GAM LGCP (20 min slot)

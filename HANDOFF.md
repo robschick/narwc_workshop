@@ -285,8 +285,8 @@ was wrong, and whether the agent slipped into UTC depended on how it parsed.
 Rather than strip the offsets to force the error, the cold open now ends in a
 live check on where the dusk shading starts. The materials' local clock is
 UTC−5 (the file's offset, the data dictionary, `day`, exercise 02), and on it
-sunset is about 18:05 and civil dusk about 18:35 (suncalc, 42.4 N 70.4 W:
-sunset 18:04 on 28 March, 18:11 on 3 April). About 23:00 means UTC; about
+sunset is about 18:05 and civil dusk about 18:35 (suncalc at the recorder, 42.066 N 70.2719 W:
+sunset 18:03 on 28 March, 18:10 on 3 April). About 23:00 means UTC; about
 19:05 means the EDT wall clock, acceptable only if the axis says EDT. The
 first draft of this called 19:05 EDT right, which contradicted the data
 dictionary; a roborev review caught it. The outline and
@@ -316,7 +316,6 @@ the lesson for an audience new to AI.
 
 Open, for the dry run: figure B is near-flat (uniform noise), so the model may
 correctly call it patternless, and the exercise needs a figure that *looks*
-like a pattern. Exercise 05 step 4 asks for "the real recorder location", but
-no coordinates are in the repo (the sunset check used 42.4 N 70.4 W as an
-approximation for Stellwagen); add them to the data dictionary.
+like a pattern. The recorder location (42.066 N, 70.2719 W, from Rob's deployment metadata)
+is now in the data dictionary and in exercise 05 step 4.
 
