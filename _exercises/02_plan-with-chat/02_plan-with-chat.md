@@ -38,7 +38,10 @@ whether it gets more agreeable than its own candidates warranted.
 
 Type `/plan` and ask it to turn the conversation into an analysis plan. It will
 explore read-only, ask you clarifying questions, and write a timestamped
-markdown file under `.posit/assistant/plans/`.
+markdown file to `.posit/assistant/plans/` at the top of the project. That
+folder starts with a dot, so the Files pane hides it: click the gear in the
+Files pane and choose **Show Hidden Files**, or open the plan with
+`file.edit(tail(list.files(".posit/assistant/plans", full.names = TRUE), 1))`.
 
 Then **open that file and edit it by hand.** Write the **acceptance checks**
 yourself. An acceptance check is something you could test after the analysis
@@ -53,12 +56,14 @@ wrong, what would you look at to notice?* A model will happily write a plan
 with no way to tell whether the result is right. This section is what lets
 the agent in block 5 know when it's done, and lets you check it.
 
-Copy the finished plan to `analysis-plan.md` in this folder.
+Copy the finished plan over `_exercises/02_plan-with-chat/analysis-plan.md`,
+next to this file. That's the copy block 5 uses, and the one git tracks.
 
 ## Step 5 — Note what happened
 
-In `notes.md` in this folder, record: which suggestion was best, which was subtly wrong, and
-what the model asked for that you hadn't thought to provide.
+In `_exercises/02_plan-with-chat/notes.md`, next to this file, record: which
+suggestion was best, which was subtly wrong, and what the model asked for that
+you hadn't thought to provide.
 
 ## Discussion
 

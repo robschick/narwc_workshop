@@ -97,7 +97,7 @@ Don't relitigate these without a reason; each was a deliberate call.
    able to survive being projected to a room.
 5. **Dry-run the cold open** (napkin sketch to Shiny app). Confirm `pa` accepts
    an image, that the build fits in eight minutes, and where the dusk shading
-   starts over three runs (19:05 local is right). Record the backup run.
+   starts over three runs (18:05–18:35 on UTC−5 is right). Record the backup run.
 6. **Record the tier 3 spine**, chaptered at the five pause points.
 7. **Decide whether attendees install `pa`** or it stays instructor-only. This
    changes the pre-workshop setup burden considerably.
@@ -284,8 +284,12 @@ A roborev review found that every raw timestamp carries an explicit `-05:00`
 offset, so the outline's premise ("the timestamps carry no time-zone label")
 was wrong, and whether the agent slipped into UTC depended on how it parsed.
 Rather than strip the offsets to force the error, the cold open now ends in a
-live check: sunset at Stellwagen in late March is about 19:05 EDT (suncalc,
-42.4 N 70.4 W: 19:04 on 28 March, 19:11 on 3 April). Shading from about 23:05
-means UTC; about 18:05 means it trusted the file's EST offset. The outline and
+live check on where the dusk shading starts. The materials' local clock is
+UTC−5 (the file's offset, the data dictionary, `day`, exercise 02), and on it
+sunset is about 18:05 and civil dusk about 18:35 (suncalc, 42.4 N 70.4 W:
+sunset 18:04 on 28 March, 18:11 on 3 April). About 23:00 means UTC; about
+19:05 means the EDT wall clock, acceptable only if the axis says EDT. The
+first draft of this called 19:05 EDT right, which contradicted the data
+dictionary; a roborev review caught it. The outline and
 syllabus also now describe the sketch as drawn (dropdown, detection timeline
 shaded dusk to dawn, hourly bars), not a day selector.

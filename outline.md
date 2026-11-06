@@ -65,12 +65,15 @@ five minutes.*
   describes the columns, and builds a working Shiny app that matches the
   sketch. Do not narrate while it runs; let the room read the screen.
 - **(4m) Check it, live.** The app works and looks right. Is it? Ask one
-  question the room can answer: sunset at Stellwagen in late March is about
-  19:05 local time, so where does the dusk shading start? The raw timestamps
-  carry a `-05:00` offset, R stores them as UTC, and the local clock was on
-  EDT (`-04:00`). So the shading can start at about 19:05 (right), 23:05 (left
-  in UTC) or 18:05 (converted with the file's EST offset), and the hourly bars
-  shift the same way. Nothing is planted. If it's wrong, that's the reveal. If
+  question the room can answer: where does the dusk shading start? On the
+  recorder's clock (UTC−5, the file's own offset and the convention in the
+  data dictionary), sunset in late March is about 18:05 and civil dusk about
+  18:35. R stores the timestamps as UTC, so shading from about 23:00 means
+  the app never converted. Shading from about 19:05 means it used the EDT
+  wall clock, which is fine only if the axis says so. The hourly bars shift
+  the same way. The real test is whether the axis says which clock it's on,
+  and whether the shading and the calls use the same one. Nothing is
+  planted. If it's wrong, that's the reveal. If
   it's right, show how you know and how little time checking took. This sets
   the tone for the session: the question is "is it right?", not "did it
   run?"

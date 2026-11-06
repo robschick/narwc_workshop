@@ -16,9 +16,9 @@ time: "08:30"
   dashboard sketch, the raw seven-day up-call detection file, and the `pa`
   agent. It reads the file, describes the columns, and builds a working Shiny
   app that matches the sketch. No narration while it runs.
-- **(4m) Check it, live.** The app works and looks right. Is it? Sunset at
-  Stellwagen in late March is about 19:05 local time; does the dusk shading
-  start there? Set the tone: the question is "is it right?", not "did it
+- **(4m) Check it, live.** The app works and looks right. Is it? On the
+  recorder's clock (UTC−5), sunset in late March is about 18:05; does the
+  dusk shading start there? Set the tone: the question is "is it right?", not "did it
   run?"
 - **(3m) Welcome and the map.** The three tiers and what you'll leave with.
   Nobody builds an app today; that's tier 3, and block 5 shows how.
@@ -30,10 +30,11 @@ helpers point people there rather than troubleshooting in the room.
 
 ## Notes for the instructor
 
-- Nothing is planted. The raw timestamps carry a `-05:00` offset (EST), R
-  stores them as UTC, and the local clock in late March 2009 was on EDT.
-  Shading from about 23:05 means the app stayed in UTC; from about 18:05, it
-  trusted the file's offset. Either is worth showing. If it's right, say how
+- Nothing is planted. The raw timestamps carry a `-05:00` offset, R stores
+  them as UTC, and these materials use UTC−5 as local time throughout. Sunset
+  is about 18:05 and civil dusk about 18:35 on that clock. Shading from about
+  23:00 means the app stayed in UTC; from about 19:05, it used the EDT wall
+  clock, which is fine only if the axis says EDT. Either is worth showing. If it's right, say how
   you checked.
 - Run it from a copy of `_demos/cold-open/` outside any repo. This repo's notes
   discuss the time zones, and an agent started inside it can read them.

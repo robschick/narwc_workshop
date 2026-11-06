@@ -160,9 +160,10 @@ Close the assistant pane. Do these by hand on `fit_gam`:
       Inside this repo the agent can read notes that discuss the time zones.
 - [ ] Does `pa` accept the napkin sketch image (`Shiny_Demo_Drawing.png`)?
 - [ ] Build the app from the sketch, without mentioning time zones. Where
-      does the dusk shading start: about **19:05** (local EDT, right), **23:05**
-      (UTC) or **18:05** (the file's EST offset)? Run it three times and note
-      each.
+      does the dusk shading start: about **18:05–18:35** (UTC−5, sunset to
+      civil dusk, the materials' convention), **23:00** (UTC, never
+      converted) or **19:05** (EDT wall clock)? Does the axis say which clock?
+      Run it three times and note each.
 - [ ] Build time: ___ min (slot: 8).
 
 ## 7. Optional: a second pass in Positron
