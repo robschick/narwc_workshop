@@ -157,10 +157,12 @@ Close the assistant pane. Do these by hand on `fit_gam`:
 
 - [ ] Run each attempt from a copy **outside any repo**, e.g.
       `cp -r _demos/cold-open ~/Desktop/cold-open-run1`, and start `pa` there.
-      Inside this repo the agent can read notes that describe the UTC trap.
+      Inside this repo the agent can read notes that discuss the time zones.
 - [ ] Does `pa` accept the napkin sketch image (`Shiny_Demo_Drawing.png`)?
-- [ ] Build the app from the sketch. Does it plot by hour in **UTC** (the
-      planted error) without being prompted? Run it three times. How often?
+- [ ] Build the app from the sketch, without mentioning time zones. Where
+      does the dusk shading start: about **19:05** (local EDT, right), **23:05**
+      (UTC) or **18:05** (the file's EST offset)? Run it three times and note
+      each.
 - [ ] Build time: ___ min (slot: 8).
 
 ## 7. Optional: a second pass in Positron
@@ -184,5 +186,5 @@ Close the assistant pane. Do these by hand on `fit_gam`:
 | Agent flagged the wrong model? (run 1 / run 2) | |
 | Anything the agent touched besides `tier3.R` | |
 | `pa` image input works? | |
-| UTC error reproduces (x / 3) | |
+| Dusk shading starts at (run 1 / 2 / 3) | |
 | Anything an attendee could not have worked out alone | |

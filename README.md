@@ -28,7 +28,7 @@ TUI — with Posit AI Pass for access. No API keys anywhere in the setup path.
 2. Hear back from Posit on AI Pass seats and a Cloud instructor space. The setup
    path assumes yes and degrades to bring-your-own-key if not.
 3. Decide which repository the tier 3 agent run operates on.
-4. Dry-run the cold open (napkin to Shiny app, planted UTC error) and record
+4. Dry-run the cold open (napkin to Shiny app, live sunset check) and record
    the backup run (see `outline.md`).
 5. Record the tier 3 spine, chaptered.
 6. Fill `_solutions/` as the exercises settle.

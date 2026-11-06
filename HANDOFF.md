@@ -72,7 +72,7 @@ Don't relitigate these without a reason; each was a deliberate call.
 | Wow → feet dirty → sit back | Rob's framing. Attention is highest at the start and lowest at the end, so the heavy typing goes in the middle |
 | Tier 3 = recording only, 15 minutes | The live task was cut in the move to three hours; the recording protects the timing |
 | Posit Assistant throughout, `pa` for tier 3 | One product across three surfaces, so escalating a tier changes autonomy, not vendor |
-| Cold open is napkin to Shiny app, with a planted UTC error (2026-10-26) | Buys the wow and the credibility to spend the day on verification; a working app that's wrong makes the point harder than a plot. Backup recording in `_demos/` |
+| Cold open is napkin to Shiny app, then a live check against local sunset (2026-10-26; nothing planted since 2026-11-06) | Buys the wow and the credibility to spend the day on verification. The timestamps carry a `-05:00` offset, so a planted UTC error depended on luck in parsing, and making it reliable would mean doctoring the data. Either outcome of the check makes the point. Backup recording in `_demos/` |
 | Exercise 07 is assistant-off | Verification is the point of the workshop; it needs its own protected block |
 | No API keys | AI Pass; see above |
 | RStudio equal to Positron | Much of the NARWC room has never left RStudio |
@@ -85,7 +85,9 @@ Don't relitigate these without a reason; each was a deliberate call.
    (NOAA NCEI), so redistribution is not a concern.
 2. **Hear back from Posit** on AI Pass seats and a Cloud instructor space. The
    request went to Posit on 2026-10-26, asking for an answer by November 3.
-   The setup path assumes yes.
+   As of 2026-11-06 Posit has answered on Cloud only (at full price), not on
+   AI Pass seats or whether the assistant runs in Cloud. See the session of
+   2026-11-03 to 11-06 below.
 3. **Decide whether tier 3 is hands-on or watched.** Rob's 2026-10-26 edits to
    the `syllabus.md` overview say "three hands-on components" and that
    attendees hand the plan file to the agent themselves. The schedule, the
@@ -94,9 +96,8 @@ Don't relitigate these without a reason; each was a deliberate call.
 4. **Pick the repository for the tier 3 agent run.** It must be real, yours, and
    able to survive being projected to a room.
 5. **Dry-run the cold open** (napkin sketch to Shiny app). Confirm `pa` accepts
-   an image, that the build fits in eight minutes, and that the planted UTC
-   error reproduces every time. Check what time zone the DCLDE 2013 timestamps
-   are actually in. Record the backup run.
+   an image, that the build fits in eight minutes, and where the dusk shading
+   starts over three runs (19:05 local is right). Record the backup run.
 6. **Record the tier 3 spine**, chaptered at the five pause points.
 7. **Decide whether attendees install `pa`** or it stays instructor-only. This
    changes the pre-workshop setup burden considerably.
@@ -216,3 +217,75 @@ of the decision table.
 - Exercise 07: the four checks, plus the trap.
 - Exercise 08: turn the follow-along README into the tier 3 hands-on exercise.
 - Exercise 09: Ollama becomes take-home only.
+
+## Sessions of 2026-11-03 to 11-06
+
+### Posit's answer, so far
+
+The exchange is with Posit's Academic Licenses team. They answered on Posit
+Cloud only:
+
+- **Cloud is available, at full price, not donated.** Order online at
+  <https://posit.cloud/plans>; no order form needed. Rob can buy it for
+  attendees and set the project up in advance. The matching option in Posit's
+  teaching docs is the **fee-per-student** instructor plan: $15/month plus
+  $5/month per student, attendees on the free plan, joining by link, with the
+  assignment project copied to each of them and a base project for packages.
+  About $115 for one month at 20 attendees. **Not bought yet.**
+- **Not answered: AI Pass seats for attendees.** That was the main ask. AI Pass
+  may sit with a different team. Without seats, each attendee pays $20 ($5 for
+  a new subscriber's first month), or uses bring-your-own-key, which makes the
+  fallback in *Loose ends from the move* more likely to be needed.
+- **Answered by testing, 2026-11-06: Posit Assistant runs inside Cloud with
+  a paid AI Pass sign-in.** Rob set up a Cloud RStudio instance, connected his
+  AI Pass account, and it worked on a quick penguins test. A workspace cloned
+  from this repo is where the dry run continues. Not yet known: whether
+  attendees on the free Cloud plan can sign in the same way, and whether `/plan`
+  and live-session access behave as on desktop.
+- **Packages are not pre-installed in a Cloud clone.** `here` was missing.
+  Running `_setup.R` fixes it for one person; for attendees, install them in
+  the instructor space's base project so every copy starts with them.
+- An AI Pass purchase and a Cloud purchase are separate. Rob's own AI Pass
+  seat, subscribed from desktop RStudio, is needed whatever happens with Cloud.
+
+### Repo changes
+
+- Added `narwc_workshop.Rproj` and `_setup.R` (installs the packages the
+  exercises use, checks the 8,256 rows load). `website/setup.qmd` already told
+  attendees to use both; neither existed.
+- Staged the cold-open kit in `_demos/cold-open/` (sketch plus raw CSV, no
+  README on purpose). Run each attempt from a copy **outside any repo**: this
+  repo's notes discuss the time zones, and an agent started inside it
+  can read them. The earlier `shiny_demo/` recording ran inside the repo, so
+  check whether it actually fell into the error.
+- Pushed to GitHub so the dry run can use a fresh clone.
+
+### Dry-run findings so far (section 0)
+
+- **The Posit Assistant pane is not installed by default in RStudio.** It
+  shows "Posit Assistant Not Installed" with an install button. The setup page
+  goes straight to "open the assistant pane and sign in."
+- **Existing API keys are picked up silently.** With `ANTHROPIC_API_KEY` and
+  `GOOGLE_API_KEY` in `~/.Renviron`, the model menu offered Anthropic and
+  Gemini and no AI Pass, defaulting to Claude Sonnet 5.5. Messages would have
+  been billed to the key. Plausible for anyone in the audience who has used
+  ellmer. The setup page should say to choose Posit AI Pass in the model menu.
+- **The pane and `pa` are easy to confuse.** The materials use both names
+  without saying they are the same assistant, one in the IDE and one in a
+  terminal. Add a sentence to `website/setup.qmd` and the block 2 page.
+- `.posit/assistant/plans/` has to be created by hand
+  (`dir.create(".posit/assistant/plans", recursive = TRUE)`); whether Posit
+  Assistant creates it itself is still to be seen.
+
+
+### Cold open: no planted error (2026-11-06)
+
+A roborev review found that every raw timestamp carries an explicit `-05:00`
+offset, so the outline's premise ("the timestamps carry no time-zone label")
+was wrong, and whether the agent slipped into UTC depended on how it parsed.
+Rather than strip the offsets to force the error, the cold open now ends in a
+live check: sunset at Stellwagen in late March is about 19:05 EDT (suncalc,
+42.4 N 70.4 W: 19:04 on 28 March, 19:11 on 3 April). Shading from about 23:05
+means UTC; about 18:05 means it trusted the file's EST offset. The outline and
+syllabus also now describe the sketch as drawn (dropdown, detection timeline
+shaded dusk to dawn, hourly bars), not a day selector.

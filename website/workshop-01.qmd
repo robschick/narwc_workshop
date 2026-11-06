@@ -1,6 +1,6 @@
 ---
 title: "Cold open: napkin to app"
-description: "The destination first: an agent turns a hand-drawn sketch and the raw up-call data into a working Shiny app, then an honest look at what it got wrong."
+description: "The destination first: an agent turns a hand-drawn sketch and the raw up-call data into a working Shiny app, then a live check of whether it's right."
 description-short: "The wow, then the curtain pulled back."
 duration: 15min
 time: "08:30"
@@ -16,9 +16,10 @@ time: "08:30"
   dashboard sketch, the raw seven-day up-call detection file, and the `pa`
   agent. It reads the file, describes the columns, and builds a working Shiny
   app that matches the sketch. No narration while it runs.
-- **(4m) Pull the curtain back.** The app works and looks right, but the daily
-  peak is in the wrong hours: the timestamps are UTC and nobody asked about
-  time zones. Set the tone: a polished, working app can still be wrong.
+- **(4m) Check it, live.** The app works and looks right. Is it? Sunset at
+  Stellwagen in late March is about 19:05 local time; does the dusk shading
+  start there? Set the tone: the question is "is it right?", not "did it
+  run?"
 - **(3m) Welcome and the map.** The three tiers and what you'll leave with.
   Nobody builds an app today; that's tier 3, and block 5 shows how.
 
@@ -29,9 +30,13 @@ helpers point people there rather than troubleshooting in the room.
 
 ## Notes for the instructor
 
-- The error is planted: the timestamps carry no time-zone label and the prompt
-  doesn't mention one. Confirm in dry-run that the agent falls into it every
-  time. Do not improvise it.
-- Keep a recording of a clean run, with the same error, in `_demos/` as the
+- Nothing is planted. The raw timestamps carry a `-05:00` offset (EST), R
+  stores them as UTC, and the local clock in late March 2009 was on EDT.
+  Shading from about 23:05 means the app stayed in UTC; from about 18:05, it
+  trusted the file's offset. Either is worth showing. If it's right, say how
+  you checked.
+- Run it from a copy of `_demos/cold-open/` outside any repo. This repo's notes
+  discuss the time zones, and an agent started inside it can read them.
+- Keep a recording of a full run and the check in `_demos/` as the
   backup; the first eight minutes are the worst possible time for a network
   failure.

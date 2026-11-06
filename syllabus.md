@@ -88,9 +88,9 @@ block is watched rather than typed, because by then attention is lowest.
 **Block 1** opens cold, with no slides: a hand-drawn sketch of a dashboard, the
 raw detection file, and an agent that turns them into a working Shiny app
 showing each detection on a timeline shaded dusk to dawn, and calls per hour
-of day. Four minutes are then spent on an error
-deliberately planted in it, which sets the tone for the day: a polished, working
-app can still be wrong. A recording of the run is ready as a backup. Setup is done before the session, from
+of day. Four minutes are then spent checking it live against something the
+room can verify, local sunset, which sets the tone for the day: the question is
+whether it's right, not whether it ran. A recording of the run is ready as a backup. Setup is done before the session, from
 the workshop site, with Posit Cloud as the fallback for anyone it fails for.
 
 **Block 2** teaches the conversation model — system, user and assistant roles,

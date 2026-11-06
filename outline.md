@@ -64,20 +64,23 @@ five minutes.*
   of day) and the raw seven-day up-call file. It reads the file,
   describes the columns, and builds a working Shiny app that matches the
   sketch. Do not narrate while it runs; let the room read the screen.
-- **(4m) Pull the curtain back.** The app works and looks right. Then the
-  catch: the daily peak is in the wrong hours, because the timestamps are UTC
-  and nobody, the agent included, asked about time zones. The error is
-  planted, not hoped for: the timestamps carry no time-zone label and the
-  prompt doesn't mention one. Confirm in dry-run that the agent falls into it
-  every time; if it doesn't, change the setup, don't improvise. This sets the
-  tone for the session: a polished, working app can still be wrong.
+- **(4m) Check it, live.** The app works and looks right. Is it? Ask one
+  question the room can answer: sunset at Stellwagen in late March is about
+  19:05 local time, so where does the dusk shading start? The raw timestamps
+  carry a `-05:00` offset, R stores them as UTC, and the local clock was on
+  EDT (`-04:00`). So the shading can start at about 19:05 (right), 23:05 (left
+  in UTC) or 18:05 (converted with the file's EST offset), and the hourly bars
+  shift the same way. Nothing is planted. If it's wrong, that's the reveal. If
+  it's right, show how you know and how little time checking took. This sets
+  the tone for the session: the question is "is it right?", not "did it
+  run?"
 - **(3m) Welcome, and the map.** Who's here, the three tiers, and the promise:
   by 11:30 you will have done tiers 1 and 2 yourself and watched tier 3.
   Say plainly that nobody builds an app today; that is tier 3 work, and
   block 5 shows how it's done.
 
-**Backup recording.** Record a clean run of the full eight minutes, with the
-same error, and keep it in `_demos/`. Switch to it if the live run stalls or the
+**Backup recording.** Record a full eight-minute run and the check that
+follows it, and keep it in `_demos/`. Switch to it if the live run stalls or the
 network fails; the first eight minutes are the worst time for either.
 
 **Setup happens before the session**, not in it.
@@ -234,7 +237,8 @@ full-day version — it is what makes pre-session setup realistic at all.
 - Whether Posit grants AI Pass seats and a Cloud instructor space. Both asks are
   in the syllabus; the setup path assumes yes and degrades to bring-your-own-key
   if not.
-- The cold open's planted error is the UTC time shift. Confirm in dry-run that
-  it reproduces every time and that the app build fits in eight minutes.
+- The cold open's sunset check. Run it three times in the dry run and note
+  where the shading starts each time, so you know what's likely on the day.
+  Confirm the app build fits in eight minutes.
 - Dataset staging: pre-loaded in the project, or fetched in block 3? Pre-loaded
   is safer for conference wifi.

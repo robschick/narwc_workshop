@@ -18,8 +18,8 @@ gets the right model and a real review, after they've just watched an agent
 fit the wrong one.
 
 The full cut has a second job: show how you actually work, honestly,
-including where it went wrong. Do not stage it. The cold open already has a
-planted error; this one should only show errors that really happened.
+including where it went wrong. Do not stage it: show only errors that really
+happened.
 
 ## The story in one sentence
 
